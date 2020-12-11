@@ -9,7 +9,7 @@
     </p>
 
 
-        <div class ="form-horizontal" id="newPlayerForm" visible="false">
+<%--        <div class ="form-horizontal" id="newPlayerForm" visible="false">
 
             <h3>Hello, welcome to our Poker Web Application. We need to get some details from you in order to create your profile.</h3>
 
@@ -22,7 +22,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Product code is requried." ControlToValidate="prodCodeTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
 
         </div>
-     </div>
+     </div>--%>
 
 
 

@@ -184,7 +184,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GameInProgress.aspx" />
+    <Content Include="GameFolder\GameInProgress.aspx" />
+    <Content Include="GameFolder\JoinGame.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -430,12 +431,19 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="GameInProgress.aspx.cs">
+    <Compile Include="GameFolder\GameInProgress.aspx.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GameInProgress.aspx.designer.cs">
+    <Compile Include="GameFolder\GameInProgress.aspx.designer.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameFolder\JoinGame.aspx.cs">
+      <DependentUpon>JoinGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameFolder\JoinGame.aspx.designer.cs">
+      <DependentUpon>JoinGame.aspx</DependentUpon>
     </Compile>
     <Compile Include="PokerHome.aspx.cs">
       <DependentUpon>PokerHome.aspx</DependentUpon>
