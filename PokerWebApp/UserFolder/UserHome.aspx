@@ -2,27 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-        <h1 style="border-bottom-style: solid"> My Profile </h1>
+<%--        <h1 style="border-bottom-style: solid"> My Profile </h1>
+
+    <h3>
+       Hello, <asp:Label ID="lb_playerName" runat="server" Text="Label"></asp:Label>, welcome to your profile.
+    </h3>
 
     <p>
-       Hello, <asp:Label ID="lb_playerName" runat="server" Text="Label"></asp:Label>, welcome to your profile.
-    </p>
-
-
-<%--        <div class ="form-horizontal" id="newPlayerForm" visible="false">
-
-            <h3>Hello, welcome to our Poker Web Application. We need to get some details from you in order to create your profile.</h3>
-
-          <div class="form-group">
-
-              <asp:Label ID="Label2" runat="server" Text="Product Code: " CssClass="col-md-2"></asp:Label>
-
-            <asp:TextBox ID="prodCodeTxtbox" runat="server"></asp:TextBox>
-
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Product code is requried." ControlToValidate="prodCodeTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
-
-        </div>
-     </div>--%>
+        Venmo:  <%#HttpUtility.HtmlEncode(Eval("AvailableQty").ToString()) %>
+    </p>--%>
 
 
 

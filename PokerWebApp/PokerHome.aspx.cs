@@ -13,5 +13,31 @@ namespace PokerWebApp
         {
 
         }
+
+        protected void btn_playerJoinGame_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }
