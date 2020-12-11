@@ -171,6 +171,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AdminFolder\AddPlayer.aspx" />
+    <Content Include="AdminFolder\AdminMainPage.aspx" />
+    <Content Include="AdminFolder\CreateGame.aspx" />
+    <Content Include="AdminFolder\RemovePlayer.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -274,6 +278,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="User\UserHome.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -385,6 +390,34 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminFolder\AddPlayer.aspx.cs">
+      <DependentUpon>AddPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFolder\AddPlayer.aspx.designer.cs">
+      <DependentUpon>AddPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFolder\AdminMainPage.aspx.cs">
+      <DependentUpon>AdminMainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFolder\AdminMainPage.aspx.designer.cs">
+      <DependentUpon>AdminMainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFolder\CreateGame.aspx.cs">
+      <DependentUpon>CreateGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFolder\CreateGame.aspx.designer.cs">
+      <DependentUpon>CreateGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFolder\RemovePlayer.aspx.cs">
+      <DependentUpon>RemovePlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFolder\RemovePlayer.aspx.designer.cs">
+      <DependentUpon>RemovePlayer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -444,6 +477,14 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UserAccess.cs" />
+    <Compile Include="User\UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

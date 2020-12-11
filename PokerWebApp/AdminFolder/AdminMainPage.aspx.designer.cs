@@ -7,38 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PokerWebApp
+namespace PokerWebApp.AdminFolder
 {
 
 
-    public partial class SiteMaster
+    public partial class AdminMainPage
     {
 
         /// <summary>
-        /// adminLink control.
+        /// btn_AddPlayer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor adminLink;
+        protected global::System.Web.UI.WebControls.Button btn_AddPlayer;
 
         /// <summary>
-        /// userProfile control.
+        /// btn_RemovePlayer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor userProfile;
+        protected global::System.Web.UI.WebControls.Button btn_RemovePlayer;
 
         /// <summary>
-        /// MainContent control.
+        /// btn_CreateGame control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btn_CreateGame;
     }
 }
