@@ -15,6 +15,69 @@ namespace PokerWebApp
     {
 
         /// <summary>
+        /// btn_test control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_test;
+
+        /// <summary>
+        /// img_b1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_b1;
+
+        /// <summary>
+        /// img_b2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_b2;
+
+        /// <summary>
+        /// img_b3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_b3;
+
+        /// <summary>
+        /// img_b4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_b4;
+
+        /// <summary>
+        /// img_b5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_b5;
+
+        /// <summary>
+        /// hd_namep1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hd_namep1;
+
+        /// <summary>
         /// img_C1P1 control.
         /// </summary>
         /// <remarks>
@@ -31,6 +94,15 @@ namespace PokerWebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image img_C2P1;
+
+        /// <summary>
+        /// hd_namep2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hd_namep2;
 
         /// <summary>
         /// img_C1P2 control.
@@ -51,6 +123,15 @@ namespace PokerWebApp
         protected global::System.Web.UI.WebControls.Image img_C2P2;
 
         /// <summary>
+        /// hd_namep3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hd_namep3;
+
+        /// <summary>
         /// img_C1P3 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +148,15 @@ namespace PokerWebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image img_C2P3;
+
+        /// <summary>
+        /// hd_namep4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hd_namep4;
 
         /// <summary>
         /// img_C1P4 control.
@@ -87,6 +177,15 @@ namespace PokerWebApp
         protected global::System.Web.UI.WebControls.Image img_C2P4;
 
         /// <summary>
+        /// hd_namep5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hd_namep5;
+
+        /// <summary>
         /// img_C1P5 control.
         /// </summary>
         /// <remarks>
@@ -105,6 +204,15 @@ namespace PokerWebApp
         protected global::System.Web.UI.WebControls.Image img_C2P5;
 
         /// <summary>
+        /// hd_namep6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hd_namep6;
+
+        /// <summary>
         /// img_C1P6 control.
         /// </summary>
         /// <remarks>
@@ -121,5 +229,23 @@ namespace PokerWebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image img_C2P6;
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
+        /// <summary>
+        /// Image2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image2;
     }
 }

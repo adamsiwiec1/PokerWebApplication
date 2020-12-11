@@ -17,7 +17,9 @@ namespace PokerWebApp
 
         public Card InHand2 { get; set; }
 
+        public Player() { }
 
+        public Player(string pname) { Name = pname; }
 
     }
 }
