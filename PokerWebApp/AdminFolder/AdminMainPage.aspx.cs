@@ -13,5 +13,20 @@ namespace PokerWebApp.AdminFolder
         {
 
         }
+
+        protected void btn_AddPlayer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminFolder/AddPlayer.aspx");
+        }
+
+        protected void btn_RemovePlayer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminFolder/RemovePlayer.aspx");
+        }
+
+        protected void btn_CreateGame_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminFolder/CreatePlayer.aspx");
+        }
     }
 }

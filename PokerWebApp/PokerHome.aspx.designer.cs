@@ -11,16 +11,25 @@ namespace PokerWebApp
 {
 
 
-    public partial class UserProfile
+    public partial class PokerHome
     {
 
         /// <summary>
-        /// lb_playerName control.
+        /// btn_playerCreateGame control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_playerName;
+        protected global::System.Web.UI.WebControls.Button btn_playerCreateGame;
+
+        /// <summary>
+        /// btn_playerJoinGame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_playerJoinGame;
     }
 }

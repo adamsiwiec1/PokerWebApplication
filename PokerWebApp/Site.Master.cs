@@ -70,6 +70,18 @@ namespace PokerWebApp
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            //added code here to show links here for each role
+            if (HttpContext.Current.User.IsInRole("Administrator"))
+            {
+                adminLink.Visible = true;
+            }
+
+            if (HttpContext.Current.User.IsInRole("Player"))
+            {
+                userProfile.Visible = true;
+                pokerHomePlayNow.Visible = true;
+            }
+
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

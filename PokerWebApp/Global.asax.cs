@@ -27,7 +27,7 @@ namespace PokerWebApp
             if (!roleManager.RoleExists("Player"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Employee";
+                role.Name = "Player";
                 roleManager.Create(role);
 
             }
@@ -41,7 +41,7 @@ namespace PokerWebApp
 
                 //we give them username + email
                 var user = new ApplicationUser();
-                user.Email = "admin1@test.com";
+                user.Email = "adminuser1@test.com";
                 user.UserName = user.Email;
 
                 //then we create the user and add thier password

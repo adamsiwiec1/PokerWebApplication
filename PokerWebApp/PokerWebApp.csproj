@@ -249,6 +249,7 @@
     <Content Include="Images\TWO HEARTS.jpeg" />
     <Content Include="Images\TWO SPADES.jpeg" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="PokerHome.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -278,7 +279,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="User\UserHome.aspx" />
+    <Content Include="UserFolder\UserHome.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -436,6 +437,13 @@
     <Compile Include="GameInProgress.aspx.designer.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PokerHome.aspx.cs">
+      <DependentUpon>PokerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PokerHome.aspx.designer.cs">
+      <DependentUpon>PokerHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PokerLogic\Board.cs" />
     <Compile Include="PokerLogic\Card.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -478,11 +486,11 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="UserAccess.cs" />
-    <Compile Include="User\UserHome.aspx.cs">
+    <Compile Include="UserFolder\UserHome.aspx.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\UserHome.aspx.designer.cs">
+    <Compile Include="UserFolder\UserHome.aspx.designer.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
