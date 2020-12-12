@@ -7,7 +7,7 @@
     </div>
 
 
- <div style="background-image: url('Images/poker_background.jpeg'); background-position: center; width: 108%; position: absolute; background-attachment:local;background-repeat: repeat-y; top: 200px; left: 70px; width: 1600px; height: 700px;">
+ <div style="background-image: url('https://localhost:44338/Images/poker_background.jpeg'); background-position: center; width: 108%; position: absolute; background-attachment:local;background-repeat: repeat-y; top: 200px; left: 70px; width: 1600px; height: 700px;">
 
      <%-- board --%>
     <div style="position: absolute; top: 61px; left: 495px; width: 349px; height: 113px;">
@@ -83,13 +83,9 @@
      </div>
                  
 </div>
-     </div>
-           <div style="width: 237px">
-                 <asp:Image ID="Image1" runat="server" Height="100px" Width="60px"></asp:Image>
 
-                <asp:Image ID="Image2" runat="server" Height="100px" Width="60px"></asp:Image>
-            </div>
 
-             </div>
+
+
 </asp:Content>
 

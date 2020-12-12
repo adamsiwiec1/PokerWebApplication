@@ -71,7 +71,7 @@ namespace PokerWebApp
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             SqlParameter param = new SqlParameter("@pid", playerID);
-            param.DbType = System.Data.DbType.Int32;
+            param.DbType = System.Data.DbType.String;
             cmd.Parameters.Add(param);
 
 
