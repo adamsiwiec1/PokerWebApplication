@@ -180,7 +180,7 @@ namespace PokerWebApp
 
             Player player = new Player();
 
-            DataRow dr = table.Rows[counter];
+            DataRow dr = table.Rows[0];
 
 
             string face = dr["C1_Value"].ToString();
