@@ -134,7 +134,7 @@ namespace PokerWebApp
 
 
 
-        public static Player UpdateThenGetPlayerCardsByName(string playerName, string newValue1, string newSuit1, string newValue2, string newSuit2, int counter)
+        public static Player UpdateThenGetPlayerCardsByName(string playerName, string newValue1, string newSuit1, string newValue2, string newSuit2)
         {
 
             //This is basically done, its for the button
@@ -158,7 +158,7 @@ namespace PokerWebApp
 
             param = new SqlParameter("@c1_suit", newSuit1);
             param.DbType = System.Data.DbType.String;
-            cmd.Parameters.Add(param);
+            cmd.Parameters.Add(param); 
 
             param = new SqlParameter("@c2_value", newValue2);
             param.DbType = System.Data.DbType.String;

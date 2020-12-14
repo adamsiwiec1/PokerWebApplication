@@ -71,23 +71,31 @@ namespace PokerWebApp
 
         protected void btn_test_Click(object sender, EventArgs e)
         {
+            Player[] playerlist = new Player[6];
             Player player1 = new Player(GameAccess.GetPlayerNameByID("3636b60b-e389-44b5-af06-84f2a2192c6d"));
             string p1Name = player1.Name;
+            
             Player player2 = new Player(GameAccess.GetPlayerNameByID("3b9e0ab4-7a73-4012-959c-b2b28a893750"));
             string p2Name = player2.Name;
+            
             Player player3 = new Player(GameAccess.GetPlayerNameByID("7376ff2a-d4e8-4d10-bbf4-26c220ef270a"));
             string p3Name = player3.Name;
+            
             Player player4 = new Player(GameAccess.GetPlayerNameByID("9ad17ec7-1665-4bdc-b7eb-4ccc89d72511"));
             string p4Name = player4.Name;
+            
             Player player5 = new Player(GameAccess.GetPlayerNameByID("a149f5d7-972b-4199-b776-a0a4e8fa3db9"));
             string p5Name = player5.Name;
+         
             Player player6 = new Player(GameAccess.GetPlayerNameByID("aea98e3c-8e7c-46f4-a2d4-60479965f1c3"));
             string p6Name = player6.Name;
+            
 
-            int counter = 1;
+            //int counter = 1;
             Dealer dealer = new Dealer();
             Board board = new Board();
             Deck deck = new Deck();
+            
             dealer.ShuffleCards(deck);
             dealer.Flop(deck, board);
             dealer.Turn(deck, board);
@@ -104,7 +112,7 @@ namespace PokerWebApp
             GameAccess.UpdateBoard("700", board.currBoard[0].Face.ToString(), board.currBoard[0].Suit.ToString(), board.currBoard[1].Face.ToString(), board.currBoard[1].Suit.ToString(), board.currBoard[2].Face.ToString(), board.currBoard[2].Suit.ToString(), board.currBoard[3].Face.ToString(), board.currBoard[3].Suit.ToString(), board.currBoard[4].Face.ToString(), board.currBoard[4].Suit.ToString());
 
 
-            img_b1.ImageUrl = "Images/NINE HEARTS.jpeg";
+            img_b1.ImageUrl = "Images/" + cardimg1 + ".jpeg";
             img_b2.ImageUrl = "Images/" + cardimg2 + ".jpeg";
             img_b3.ImageUrl = "Images/" + cardimg3 + ".jpeg";
             img_b4.ImageUrl = "Images/" + cardimg4 + ".jpeg";
@@ -120,61 +128,329 @@ namespace PokerWebApp
 
 
             player1 = dealer.DealToPlayer(player1, deck);
-            player1 = GameAccess.UpdateThenGetPlayerCardsByName(p1Name, player1.InHand1.Face.ToString(), player1.InHand1.Suit.ToString(), player1.InHand2.Face.ToString(), player1.InHand2.Suit.ToString(), counter);
-
+            player1 = GameAccess.UpdateThenGetPlayerCardsByName(p1Name, player1.InHand1.Face.ToString(), player1.InHand1.Suit.ToString(), player1.InHand2.Face.ToString(), player1.InHand2.Suit.ToString());
+            player1.Name = p1Name;
             string cardURL = Card.prcard(player1.InHand1);
             img_C1P1.ImageUrl = "Images/" + cardURL + ".jpeg";
             cardURL = Card.prcard(player1.InHand2);
             img_C2P1.ImageUrl = "Images/" + cardURL + ".jpeg";
-            counter++;
+            
 
 
             player2 = dealer.DealToPlayer(player2, deck);
-            player2 = GameAccess.UpdateThenGetPlayerCardsByName(p2Name, player2.InHand1.Face.ToString(), player2.InHand1.Suit.ToString(), player2.InHand2.Face.ToString(), player2.InHand2.Suit.ToString(), counter);
-
+            player2 = GameAccess.UpdateThenGetPlayerCardsByName(p2Name, player2.InHand1.Face.ToString(), player2.InHand1.Suit.ToString(), player2.InHand2.Face.ToString(), player2.InHand2.Suit.ToString());
+            player2.Name = p2Name;
 
             cardURL = Card.prcard(player2.InHand1);
             img_C1P2.ImageUrl = "Images/" + cardURL + ".jpeg";
             cardURL = Card.prcard(player2.InHand2);
             img_C2P2.ImageUrl = "Images/" + cardURL + ".jpeg";
-            counter++;
+            
 
 
             player3 = dealer.DealToPlayer(player3, deck);
-            player3 = GameAccess.UpdateThenGetPlayerCardsByName(p3Name, player3.InHand1.Face.ToString(), player3.InHand1.Suit.ToString(), player3.InHand2.Face.ToString(), player3.InHand2.Suit.ToString(), counter);
-
+            player3 = GameAccess.UpdateThenGetPlayerCardsByName(p3Name, player3.InHand1.Face.ToString(), player3.InHand1.Suit.ToString(), player3.InHand2.Face.ToString(), player3.InHand2.Suit.ToString());
+            player3.Name = p3Name;
             cardURL = Card.prcard(player3.InHand1);
             img_C1P3.ImageUrl = "Images/" + cardURL + ".jpeg";
             cardURL = Card.prcard(player3.InHand2);
             img_C2P3.ImageUrl = "Images/" + cardURL + ".jpeg";
-            counter++;
+            
 
 
             player4 = dealer.DealToPlayer(player4, deck);
-            player4 = GameAccess.UpdateThenGetPlayerCardsByName(p4Name, player4.InHand1.Face.ToString(), player4.InHand1.Suit.ToString(), player4.InHand2.Face.ToString(), player4.InHand2.Suit.ToString(), counter);
-
+            player4 = GameAccess.UpdateThenGetPlayerCardsByName(p4Name, player4.InHand1.Face.ToString(), player4.InHand1.Suit.ToString(), player4.InHand2.Face.ToString(), player4.InHand2.Suit.ToString());
+            player4.Name = p4Name;
             cardURL = Card.prcard(player4.InHand1);
             img_C1P4.ImageUrl = "Images/" + cardURL + ".jpeg";
             cardURL = Card.prcard(player4.InHand2);
             img_C2P4.ImageUrl = "Images/" + cardURL + ".jpeg";
-            counter++;
+            
 
             player5 = dealer.DealToPlayer(player5, deck);
-            player5 = GameAccess.UpdateThenGetPlayerCardsByName(p5Name, player5.InHand1.Face.ToString(), player5.InHand1.Suit.ToString(), player5.InHand2.Face.ToString(), player5.InHand2.Suit.ToString(), counter);
-
+            player5 = GameAccess.UpdateThenGetPlayerCardsByName(p5Name, player5.InHand1.Face.ToString(), player5.InHand1.Suit.ToString(), player5.InHand2.Face.ToString(), player5.InHand2.Suit.ToString());
+            player5.Name = p5Name;
             cardURL = Card.prcard(player5.InHand1);
             img_C1P5.ImageUrl = "Images/" + cardURL + ".jpeg";
             cardURL = Card.prcard(player5.InHand2);
             img_C2P5.ImageUrl = "Images/" + cardURL + ".jpeg";
-            counter++;
+            
 
             player6 = dealer.DealToPlayer(player6, deck);
-            player6 = GameAccess.UpdateThenGetPlayerCardsByName(p6Name, player6.InHand1.Face.ToString(), player6.InHand1.Suit.ToString(), player6.InHand2.Face.ToString(), player6.InHand2.Suit.ToString(), counter);
-
+            player6 = GameAccess.UpdateThenGetPlayerCardsByName(p6Name, player6.InHand1.Face.ToString(), player6.InHand1.Suit.ToString(), player6.InHand2.Face.ToString(), player6.InHand2.Suit.ToString());
+            player6.Name = p6Name;
             cardURL = Card.prcard(player6.InHand1);
             img_C1P6.ImageUrl = "Images/" + cardURL + ".jpeg";
             cardURL = Card.prcard(player6.InHand2);
             img_C2P6.ImageUrl = "Images/" + cardURL + ".jpeg";
+            playerlist[0] = player1;
+            playerlist[1] = player2;
+            playerlist[2] = player3;
+            playerlist[3] = player4;
+            playerlist[4] = player5;
+            playerlist[5] = player6;
+            foreach (Player player in playerlist)
+            {
+                if (dealer.StraightFlush(board, player))
+                {
+                    player.BestHand = PokerLogic.Hands.STRAIGHT_FLUSH;
+                }
+                else if(dealer.findHand(board, player).Equals(PokerLogic.Hands.FOUR_OF_A_KIND))
+                {
+                    player.BestHand = PokerLogic.Hands.FOUR_OF_A_KIND;
+                }
+                else if (dealer.findHand(board, player).Equals(PokerLogic.Hands.FULL_HOUSE))
+                {
+                    player.BestHand = PokerLogic.Hands.FULL_HOUSE;
+                }
+                else if (dealer.Flush(board, player))
+                {
+                    player.BestHand = PokerLogic.Hands.FLUSH;
+
+                }
+                else if (dealer.Straight(board, player))
+                {
+                    player.BestHand = PokerLogic.Hands.STRAIGHT;
+                }
+                else
+                {
+                    player.BestHand = dealer.findHand(board, player);
+                }
+                
+            }
+            int lowest = (int)player1.BestHand;
+            Player winner = player1;
+            List<Player> test = new List<Player>();
+            List<Player> multiWin = new List<Player>();
+            foreach(Player player in playerlist)
+            {
+                if((int)player.BestHand < lowest)
+                {
+                    winner = player;
+                    lowest = (int)player.BestHand;
+                }
+                /*else if((int)player.BestHand == lowest)
+                {
+                    test.Add(player);
+                }*/
+            }
+            
+            foreach(Player player in playerlist)
+            {
+                if((int)player.BestHand == lowest)
+                {
+                    multiWin.Add(player);
+                }
+                
+            }
+            if (multiWin.Count == 0)
+            {
+                String winnertext = winner.Name + " wins with " + winner.BestHand.ToString();
+                Label1.Text = winnertext;
+            }
+            else
+            {
+                PokerLogic.Hands winhand = multiWin[0].BestHand;
+                
+                if(winhand.Equals(PokerLogic.Hands.PAIR)){
+                    int highest = 0;
+                    foreach(Player player in multiWin)
+                    {
+                        List<int> values = new List<int>();
+                        
+                            values.Add((int)player.InHand1.Face);
+                            values.Add((int)player.InHand2.Face);
+                        
+                        foreach (Card card in board.currBoard)
+                        {
+                            values.Add((int)card.Face);
+                        }
+                        IEnumerable<int> duplicates = values.GroupBy(x => x).Where(g => g.Count() > 1).Select(x => x.Key);
+
+                        if(duplicates.First() > highest)
+                        {
+                            winner = player;
+                            highest = duplicates.First();
+                        }
+                    }
+                    
+
+                }
+                if (winhand.Equals(PokerLogic.Hands.TWO_PAIR))
+                {
+                    int highest = 0;
+                    foreach (Player player in multiWin)
+                    {
+                        List<int> values = new List<int>();
+
+                        values.Add((int)player.InHand1.Face);
+                        values.Add((int)player.InHand2.Face);
+
+                        foreach (Card card in board.currBoard)
+                        {
+                            values.Add((int)card.Face);
+                        }
+                        IEnumerable<int> duplicates = values.GroupBy(x => x).Where(g => g.Count() > 1).Select(x => x.Key);
+                        if(duplicates.Max() > highest)
+                        {
+                            winner = player;
+                            highest = duplicates.Max();
+                        }
+                        
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.THREE_OF_A_KIND))
+                {
+                    int highest = 0;
+                    foreach (Player player in multiWin)
+                    {
+                        List<int> values = new List<int>();
+
+                        values.Add((int)player.InHand1.Face);
+                        values.Add((int)player.InHand2.Face);
+
+                        foreach (Card card in board.currBoard)
+                        {
+                            values.Add((int)card.Face);
+                        }
+                        IEnumerable<int> duplicates = values.GroupBy(x => x).Where(g => g.Count() > 1).Select(x => x.Key);
+
+                        if (duplicates.First() > highest)
+                        {
+                            winner = player;
+                            highest = duplicates.First();
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.HIGH_CARD))
+                {
+                    int boardsum = 0;
+                    int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
+                    foreach (Card card in board.currBoard)
+                    {
+                        boardsum += (int)card.Face;
+                    }
+                    foreach (Player player in multiWin)
+                    {
+                        if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
+                        {
+                            winner = player;
+                            highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.STRAIGHT))
+                {
+                    int boardsum = 0;
+                    int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
+                    foreach (Card card in board.currBoard)
+                    {
+                        boardsum += (int)card.Face;
+                    }
+                    foreach (Player player in multiWin)
+                    {
+                        if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
+                        {
+                            winner = player;
+                            highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.FULL_HOUSE))
+                {
+                    int boardsum = 0;
+                    int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
+                    foreach (Card card in board.currBoard)
+                    {
+                        boardsum += (int)card.Face;
+                    }
+                    foreach (Player player in multiWin)
+                    {
+                        if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
+                        {
+                            winner = player;
+                            highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.FOUR_OF_A_KIND)){
+                    int highest = 0;
+                    foreach (Player player in multiWin)
+                    {
+                        List<int> values = new List<int>();
+
+                        values.Add((int)player.InHand1.Face);
+                        values.Add((int)player.InHand2.Face);
+
+                        foreach (Card card in board.currBoard)
+                        {
+                            values.Add((int)card.Face);
+                        }
+                        IEnumerable<int> duplicates = values.GroupBy(x => x).Where(g => g.Count() > 1).Select(x => x.Key);
+
+                        if (duplicates.First() > highest)
+                        {
+                            winner = player;
+                            highest = duplicates.First();
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.STRAIGHT_FLUSH))
+                {
+                    int boardsum = 0;
+                    int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
+                    foreach (Card card in board.currBoard)
+                    {
+                        boardsum += (int)card.Face;
+                    }
+                    foreach (Player player in multiWin)
+                    {
+                        if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
+                        {
+                            winner = player;
+                            highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.FLUSH))
+                {
+                    int boardsum = 0;
+                    int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
+                    foreach (Card card in board.currBoard)
+                    {
+                        boardsum += (int)card.Face;
+                    }
+                    foreach (Player player in multiWin)
+                    {
+                        if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
+                        {
+                            winner = player;
+                            highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
+                        }
+                    }
+                }
+                if (winhand.Equals(PokerLogic.Hands.ROYAL_FLUSH))
+                {
+                    int boardsum = 0;
+                    int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
+                    foreach (Card card in board.currBoard)
+                    {
+                        boardsum += (int)card.Face;
+                    }
+                    foreach (Player player in multiWin)
+                    {
+                        if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
+                        {
+                            winner = player;
+                            highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
+                        }
+                    }
+                }
+                String winnertext = winner.Name + " wins with " + winner.BestHand.ToString();
+                Label1.Text = winnertext;
+            }
+           
+
         }
 
 

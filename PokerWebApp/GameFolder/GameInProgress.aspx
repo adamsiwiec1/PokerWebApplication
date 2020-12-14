@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <asp:Button ID="btn_test" runat="server" Text="Test" OnClick="btn_test_Click"/>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </div>
 
 

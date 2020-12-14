@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokerWebApp.PokerLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,7 @@ namespace PokerWebApp
         public Card InHand1 { get; set; }
 
         public Card InHand2 { get; set; }
+        public Hands BestHand { get; set; }
 
         public Player() { }
 
