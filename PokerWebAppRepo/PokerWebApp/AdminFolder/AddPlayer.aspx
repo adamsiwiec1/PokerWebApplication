@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-  <h2 style="border-bottom-style: solid">Manually Add Player Details</h2>
+  <h2 style="border-bottom-style: solid">DO not use this no cookie</h2>
 
         <div class ="form-horizontal">
 
@@ -25,7 +25,7 @@
 
             <asp:TextBox ID="playerNameTxtbox" runat="server"></asp:TextBox>
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Product code is requried." ControlToValidate="playerNameTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Player name is requried." ControlToValidate="playerNameTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
 
         </div>
         <div class="form-group">
@@ -34,7 +34,7 @@
 
             <asp:TextBox ID="playerVenmoTxtbox" runat="server"></asp:TextBox>
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Product code is requried." ControlToValidate="playerVenmoTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Venmo is requried." ControlToValidate="playerVenmoTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
 
         </div>
         <div class="form-group">
@@ -43,7 +43,7 @@
 
             <asp:TextBox ID="playerBalanceTxtbox" runat="server"></asp:TextBox> <%--<input type="number" />--%>
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Product code is requried." ControlToValidate="playerBalanceTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Balance is requried." ControlToValidate="playerBalanceTxtbox" SetFocusOnError="true" Display="Dynamic" CssClass="text-danger"></asp:RequiredFieldValidator>
 
         </div>
 

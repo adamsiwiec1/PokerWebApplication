@@ -182,9 +182,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ErrorView\DeafultError.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GameFolder\GameInProgress.aspx" />
+    <Content Include="GameFolder\GameLobby.aspx" />
     <Content Include="GameFolder\JoinGame.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -431,12 +433,26 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ErrorView\DeafultError.aspx.cs">
+      <DependentUpon>DeafultError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorView\DeafultError.aspx.designer.cs">
+      <DependentUpon>DeafultError.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GameFolder\GameInProgress.aspx.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GameFolder\GameInProgress.aspx.designer.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameFolder\GameLobby.aspx.cs">
+      <DependentUpon>GameLobby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameFolder\GameLobby.aspx.designer.cs">
+      <DependentUpon>GameLobby.aspx</DependentUpon>
     </Compile>
     <Compile Include="GameFolder\JoinGame.aspx.cs">
       <DependentUpon>JoinGame.aspx</DependentUpon>
