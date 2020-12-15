@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PlayerGameInProgress.aspx.cs" Inherits="PokerWebApp.GameFolder.PlayerGameInProgress" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-        <div>
-        <asp:Button ID="btn_test" runat="server" Text="Test" OnClick="btn_test_Click"/>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    
+   <%-- Test button --%>
+    <div>
+     <asp:Button ID="btn_Test" runat="server" Text="Test" OnClick="btn_Test_Click" Width="62px"/>
     </div>
 
-
  <div style="background-image: url('https://localhost:44338/Images/poker_background.jpeg'); background-position: center; width: 108%; position: absolute; background-attachment:local;background-repeat: repeat-y; top: 200px; left: 70px; width: 1600px; height: 700px;">
+
 
      <%-- board --%>
     <div style="position: absolute; top: 61px; left: 495px; width: 349px; height: 113px;">
@@ -33,6 +33,12 @@
 
                 <asp:Image ID="img_C2P1" runat="server" Height="100px" Width="60px"></asp:Image>
             </div>
+
+         <div>
+             <asp:Label ID="lbl_PlayerName1" runat="server" Text="Label"></asp:Label>
+
+         </div>
+
          
      </div>
        <%-- player 2 --%>

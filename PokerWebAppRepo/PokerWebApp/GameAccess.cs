@@ -132,6 +132,66 @@ namespace PokerWebApp
 
         }
 
+        public static Player GetPlayerDetailsByID(string playerId)
+        {
+
+            string connString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+            SqlConnection conn = new SqlConnection(connString);
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "spGetPlayerDetailsByID";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            SqlParameter param = new SqlParameter("@id", playerId);
+            param.DbType = System.Data.DbType.String;
+            cmd.Parameters.Add(param);
+
+            DataTable table = new DataTable();
+
+            cmd.Connection.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            table.Load(reader);
+            cmd.Connection.Close();
+
+
+            Player player = new Player();
+
+            DataRow dr = table.Rows[0];
+
+
+            string name = dr["Name"].ToString();
+            string venmo = dr["Venmo"].ToString();
+            string balance = dr["balance"].ToString();
+            string face = dr["C1_Value"].ToString();
+            string suit = dr["C1_Suit"].ToString();
+            string face2 = dr["C2_Value"].ToString();
+            string suit2 = dr["C2_Suit"].ToString();
+
+            player.Name = name;
+            player.Venmo = venmo;
+            player.Balance = decimal.Parse(balance);
+            player.InHand1 = Card.MkStr(face, suit);
+            player.InHand2 = Card.MkStr(face2, suit2);
+
+            return player;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         public static Player UpdateThenGetPlayerCardsByName(string playerName, string newValue1, string newSuit1, string newValue2, string newSuit2)
