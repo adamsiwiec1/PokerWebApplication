@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,14 +16,12 @@ namespace PokerWebApp.GameFolder
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
-
-
         }
 
         protected void btn_JoinGameCreatePlayerCookieAndDetails_Click(object sender, EventArgs e)
         {
             int gameID = int.Parse(allGamesDDL.SelectedValue);
+            
             string playerName = playerNameTxtbox.Text;
             string playerVenmo = playerVenmoTxtbox.Text;
             decimal playerBalance = decimal.Parse(playerBalanceTxtbox.Text);
@@ -80,22 +79,39 @@ namespace PokerWebApp.GameFolder
             param.DbType = System.Data.DbType.String;
             cmd.Parameters.Add(param);
 
-            cmd.Connection.Open();
+            bool resultSucess;
 
-            int result = cmd.ExecuteNonQuery();
+            int queryResultCount = 3;
 
-            if (result > 0)
+
+            try
             {
-                Response.Redirect("~/GameFolder/GameLobby.aspx");
+                cmd.Connection.Open();
+
+                resultSucess = cmd.ExecuteNonQuery().Equals(queryResultCount);
+
+                if (resultSucess == true)
+                {
+                    Response.Redirect("~/GameFolder/GameLobby.aspx");
+                }
+                else
+                {
+                    Response.Redirect("~/ErrorView/DefaultError.aspx");
+                }
+
+                cmd.Connection.Close();
+
             }
-            else
+            catch(Exception ex)
             {
-                Response.Redirect("~/ErrorView/DefaultError.aspx");
+                Debug.Write("\n\n\n" + ex + "\n\n\n");
+
             }
+            finally
+            {
+                cmd.Connection.Close();
 
-            cmd.Connection.Close();
-
-            Response.Redirect("~/GameFolder/GameLobby.aspx");
+            }
         }
     }
 }

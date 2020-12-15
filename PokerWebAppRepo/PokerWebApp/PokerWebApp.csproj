@@ -188,6 +188,7 @@
     <Content Include="GameFolder\GameInProgress.aspx" />
     <Content Include="GameFolder\GameLobby.aspx" />
     <Content Include="GameFolder\JoinGame.aspx" />
+    <Content Include="GameFolder\PlayerGameInProgress.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -460,6 +461,13 @@
     </Compile>
     <Compile Include="GameFolder\JoinGame.aspx.designer.cs">
       <DependentUpon>JoinGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameFolder\PlayerGameInProgress.aspx.cs">
+      <DependentUpon>PlayerGameInProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameFolder\PlayerGameInProgress.aspx.designer.cs">
+      <DependentUpon>PlayerGameInProgress.aspx</DependentUpon>
     </Compile>
     <Compile Include="PokerHome.aspx.cs">
       <DependentUpon>PokerHome.aspx</DependentUpon>

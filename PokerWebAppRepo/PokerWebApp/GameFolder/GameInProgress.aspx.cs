@@ -16,17 +16,17 @@ namespace PokerWebApp
 
         protected void PopulateTable()
         {
-            string namePlayer1 = GameAccess.GetPlayerNameByID("3636b60b-e389-44b5-af06-84f2a2192c6d");
+            string namePlayer1 = GameAccess.GetPlayerNameByID(228);
             hd_namep1.InnerText = namePlayer1;
-            string namePlayer2 = GameAccess.GetPlayerNameByID("3b9e0ab4-7a73-4012-959c-b2b28a893750");
+            string namePlayer2 = GameAccess.GetPlayerNameByID(229);
             hd_namep2.InnerText = namePlayer2;
-            string namePlayer3 = GameAccess.GetPlayerNameByID("7376ff2a-d4e8-4d10-bbf4-26c220ef270a");
+            string namePlayer3 = GameAccess.GetPlayerNameByID(230);
             hd_namep3.InnerText = namePlayer3;
-            string namePlayer4 = GameAccess.GetPlayerNameByID("9ad17ec7-1665-4bdc-b7eb-4ccc89d72511");
+            string namePlayer4 = GameAccess.GetPlayerNameByID(233);
             hd_namep4.InnerText = namePlayer4;
-            string namePlayer5 = GameAccess.GetPlayerNameByID("a149f5d7-972b-4199-b776-a0a4e8fa3db9");
+            string namePlayer5 = GameAccess.GetPlayerNameByID(234);
             hd_namep5.InnerText = namePlayer5;
-            string namePlayer6 = GameAccess.GetPlayerNameByID("aea98e3c-8e7c-46f4-a2d4-60479965f1c3");
+            string namePlayer6 = GameAccess.GetPlayerNameByID(235);
             hd_namep6.InnerText = namePlayer6;
             string cardUrl;
 
@@ -72,25 +72,24 @@ namespace PokerWebApp
         protected void btn_test_Click(object sender, EventArgs e)
         {
             Player[] playerlist = new Player[6];
-            Player player1 = new Player(GameAccess.GetPlayerNameByID("3636b60b-e389-44b5-af06-84f2a2192c6d"));
+            Player player1 = new Player(GameAccess.GetPlayerNameByID(228));
             string p1Name = player1.Name;
             
-            Player player2 = new Player(GameAccess.GetPlayerNameByID("3b9e0ab4-7a73-4012-959c-b2b28a893750"));
+            Player player2 = new Player(GameAccess.GetPlayerNameByID(229));
             string p2Name = player2.Name;
             
-            Player player3 = new Player(GameAccess.GetPlayerNameByID("7376ff2a-d4e8-4d10-bbf4-26c220ef270a"));
+            Player player3 = new Player(GameAccess.GetPlayerNameByID(230));
             string p3Name = player3.Name;
             
-            Player player4 = new Player(GameAccess.GetPlayerNameByID("9ad17ec7-1665-4bdc-b7eb-4ccc89d72511"));
+            Player player4 = new Player(GameAccess.GetPlayerNameByID(233));
             string p4Name = player4.Name;
             
-            Player player5 = new Player(GameAccess.GetPlayerNameByID("a149f5d7-972b-4199-b776-a0a4e8fa3db9"));
+            Player player5 = new Player(GameAccess.GetPlayerNameByID(234));
             string p5Name = player5.Name;
          
-            Player player6 = new Player(GameAccess.GetPlayerNameByID("aea98e3c-8e7c-46f4-a2d4-60479965f1c3"));
+            Player player6 = new Player(GameAccess.GetPlayerNameByID(235));
             string p6Name = player6.Name;
             
-
             //int counter = 1;
             Dealer dealer = new Dealer();
             Board board = new Board();

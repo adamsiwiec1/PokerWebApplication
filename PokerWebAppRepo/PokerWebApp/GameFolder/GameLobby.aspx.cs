@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,5 +17,22 @@ namespace PokerWebApp.GameFolder
         {
 
         }
+
+
+        protected void PopulateControls()
+        {
+            //HttpContext context = HttpContext.Current;
+            //string playerGameID;
+
+            //playerGameID = context.Request.Cookies["SmootWebsite_PlayerGameID"].Value;
+
+            //string currentUserCookieFromDB = GameAccess.GetCurrentCookie(User.Identity.GetUserId());
+
+
+
+       
+
+        }
+
     }
 }

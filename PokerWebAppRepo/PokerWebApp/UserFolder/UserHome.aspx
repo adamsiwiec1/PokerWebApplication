@@ -2,20 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-<%--        <h1 style="border-bottom-style: solid"> My Profile </h1>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
 
-    <h3>
-       Hello, <asp:Label ID="lb_playerName" runat="server" Text="Label"></asp:Label>, welcome to your profile.
-    </h3>
 
-    <p>
-        Venmo:  <%#HttpUtility.HtmlEncode(Eval("AvailableQty").ToString()) %>
-    </p>--%>
+
+    <asp:GridView ID="GridView1" runat="server">
 
 
 
 
 
+
+    </asp:GridView>
 
 
 

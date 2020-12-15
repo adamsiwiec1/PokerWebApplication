@@ -59,7 +59,7 @@ namespace PokerWebApp
         }
 
 
-        public static string GetPlayerNameByID(string playerID)
+        public static string GetPlayerNameByID(int playerID)
         {
 
             string connString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
@@ -70,8 +70,8 @@ namespace PokerWebApp
             cmd.CommandText = "spGetPlayerNameByID";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-            SqlParameter param = new SqlParameter("@pid", playerID);
-            param.DbType = System.Data.DbType.String;
+            SqlParameter param = new SqlParameter("@playerDetailID", playerID);
+            param.DbType = System.Data.DbType.Int32;
             cmd.Parameters.Add(param);
 
 
@@ -275,6 +275,100 @@ namespace PokerWebApp
             string face5 = dr["B5_Value"].ToString();
             string s5 = dr["B5_Suit"].ToString();
         }
+
+
+        public static string GetCurrentCookie(string playerId)
+        {
+            string connString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+            SqlConnection conn = new SqlConnection(connString);
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "spGetCurrentCookie";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            SqlParameter param = new SqlParameter("@currentUser", playerId);
+            param.DbType = System.Data.DbType.Int32;
+            cmd.Parameters.Add(param);
+
+            cmd.Connection.Open();
+
+            var reader = cmd.ExecuteScalar();
+            string playerCookie = reader.ToString();
+
+            cmd.Connection.Close();
+
+            return playerCookie;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //public static Player GetPlayerCardsByName(string playerName)
+        //{
+
+        //    string connString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+
+        //    SqlConnection conn = new SqlConnection(connString);
+
+        //    SqlCommand cmd = conn.CreateCommand();
+        //    cmd.CommandText = "spGetPlayerCardsByName";
+        //    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+        //    SqlParameter param = new SqlParameter("@pname", playerName);
+        //    param.DbType = System.Data.DbType.String;
+        //    cmd.Parameters.Add(param);
+
+
+        //    DataTable table = new DataTable();
+
+        //    cmd.Connection.Open();
+        //    SqlDataReader reader = cmd.ExecuteReader();
+        //    table.Load(reader);
+        //    reader.Close();
+
+        //    cmd.Connection.Close();
+
+        //    Player player = new Player();
+
+        //    DataRow dr = table.Rows[0];
+
+
+        //    string face = dr["C1_Value"].ToString();
+        //    string suit = dr["C1_Suit"].ToString();
+        //    string face2 = dr["C2_Value"].ToString();
+        //    string suit2 = dr["C2_Suit"].ToString();
+
+        //    player.InHand1 = Card.MkStr(face, suit);
+        //    player.InHand2 = Card.MkStr(face2, suit2);
+
+        //    return player;
+
+        //}
 
     }
 }
