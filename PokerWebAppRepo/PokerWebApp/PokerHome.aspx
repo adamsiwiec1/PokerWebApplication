@@ -10,10 +10,7 @@
      <div class ="form-horizontal">
 
 
-
      </div>
-
-
 
     <asp:Button ID="btn_playerJoinGame" runat="server" Text="Join Game" OnClick="btn_playerJoinGame_Click"/>
 
