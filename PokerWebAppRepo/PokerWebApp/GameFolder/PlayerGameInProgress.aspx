@@ -90,15 +90,16 @@
                  
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
+   <div>
+       <asp:Button ID="btn_Check" runat="server" Text="Check" OnClick="btn_Check_Click"/>
+   </div>
+   <div>
+       <asp:Button ID="btn_Call" runat="server" Text="Call" OnClick="btn_Call_Click" /> <asp:Label ID="lbl_CallAmount" runat="server" Text="Call Amt"></asp:Label>
+   </div>
+   <div>
+       <asp:Button ID="btn_Raise" runat="server" Text="Raise" OnClick="btn_Raise_Click"/> <asp:TextBox ID="txtBox_Raise" runat="server"></asp:TextBox>
+   </div>
+   <div>
+       <asp:Button ID="btn_Fold" runat="server" Text="Fold" OnClick="btn_Fold_Click"/>
+   </div>
 </asp:Content>

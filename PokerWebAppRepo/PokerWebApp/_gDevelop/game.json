@@ -1,0 +1,820 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 99,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "com.example.gamename",
+    "projectUuid": "bc184f37-01b7-4a14-880c-deaf7f39df40",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "adaptWidth",
+    "useExternalSourceFiles": false,
+    "version": "1.0.0",
+    "name": "Project",
+    "author": "",
+    "windowWidth": 1440,
+    "windowHeight": 810,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "showGDevelopSplash": true
+    },
+    "extensionProperties": [],
+    "extensions": [
+      {
+        "name": "BuiltinObject"
+      },
+      {
+        "name": "BuiltinAudio"
+      },
+      {
+        "name": "BuiltinVariables"
+      },
+      {
+        "name": "BuiltinTime"
+      },
+      {
+        "name": "BuiltinMouse"
+      },
+      {
+        "name": "BuiltinKeyboard"
+      },
+      {
+        "name": "BuiltinJoystick"
+      },
+      {
+        "name": "BuiltinCamera"
+      },
+      {
+        "name": "BuiltinWindow"
+      },
+      {
+        "name": "BuiltinFile"
+      },
+      {
+        "name": "BuiltinNetwork"
+      },
+      {
+        "name": "BuiltinScene"
+      },
+      {
+        "name": "BuiltinAdvanced"
+      },
+      {
+        "name": "Sprite"
+      },
+      {
+        "name": "BuiltinCommonInstructions"
+      },
+      {
+        "name": "BuiltinCommonConversions"
+      },
+      {
+        "name": "BuiltinStringInstructions"
+      },
+      {
+        "name": "BuiltinMathematicalTools"
+      },
+      {
+        "name": "BuiltinExternalLayouts"
+      }
+    ],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "images/poker_background.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\poker_background.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/ACE SPADES.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\ACE SPADES.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/ACE CLUBS.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\ACE CLUBS.jpg",
+        "smoothed": true,
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "b": 245,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Poker",
+      "name": "Poker",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 255,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "Poker",
+      "v": 245,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 30,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 30,
+        "snap": false,
+        "windowMask": false,
+        "zoomFactor": 0.448
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 810,
+          "layer": "",
+          "locked": true,
+          "name": "Background",
+          "persistentUuid": "569958b6-d01a-47fa-b967-b426343f7f1e",
+          "width": 1441,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "18e81fed-2b26-45e6-a5f3-8431d0620578",
+          "width": 105,
+          "x": 18,
+          "y": 308,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 52,
+          "layer": "",
+          "locked": false,
+          "name": "GameName",
+          "persistentUuid": "bd2095fd-612a-4b5d-b79d-ff537ddfeeff",
+          "width": 122,
+          "x": 53,
+          "y": 38,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "7538cf5c-5e73-4472-ae5c-157f6bc01954",
+          "width": 80,
+          "x": 251,
+          "y": 333,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 123,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "e034da81-7eb2-4f0b-a0d4-f5c25d787fe4",
+          "width": 78,
+          "x": 1015,
+          "y": 343,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "c9dc16a9-0964-45b6-9cdf-84fda267d34d",
+          "width": 80,
+          "x": 1120,
+          "y": 330,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "81ec809f-458d-405a-9c94-f49ac0316e6a",
+          "width": 80,
+          "x": 240,
+          "y": 132,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "00ebf05e-78b3-46c1-8b6e-b7d9fc19f4ca",
+          "width": 80,
+          "x": 143,
+          "y": 133,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "6dc03283-4a6f-4c89-a791-0cfc1403ee97",
+          "width": 80,
+          "x": 639,
+          "y": 24,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "92659ac8-3ee1-467d-9af9-fcea7122816b",
+          "width": 80,
+          "x": 846,
+          "y": 556,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "6d6bec79-1f5f-4682-be75-f76b6d3df4a8",
+          "width": 80,
+          "x": 1021,
+          "y": 125,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "3bc1d331-c6a2-4dd5-9c07-2a3b7dd95c87",
+          "width": 80,
+          "x": 1127,
+          "y": 122,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "bf9f3b97-a01a-496f-a988-1cd6f1970938",
+          "width": 80,
+          "x": 112,
+          "y": 539,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "68098cf5-8cb2-4a5d-bddb-a468f9d4da02",
+          "width": 80,
+          "x": 220,
+          "y": 536,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "cb8ce39d-2d9f-4c22-9466-cb8746d7c315",
+          "width": 80,
+          "x": 550,
+          "y": 551,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "42474375-7529-47ce-a5a4-2d0b28953cef",
+          "width": 80,
+          "x": 426,
+          "y": 550,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 105,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "568c28cb-b949-4886-bbfd-f3a03e5f9ab8",
+          "width": 84,
+          "x": 1062,
+          "y": 565,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "1691fab5-6dc5-4597-90cd-327e4f5c01e7",
+          "width": 80,
+          "x": 1174,
+          "y": 562,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "23241581-02ed-4bc4-98bf-2c8f0522a865",
+          "width": 82,
+          "x": 725,
+          "y": 553,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "c48abea6-c8b7-4d00-912a-191ba15fd20c",
+          "width": 80,
+          "x": 430,
+          "y": 22,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "e470c941-f9ab-422d-b710-28fb5180ef32",
+          "width": 80,
+          "x": 542,
+          "y": 23,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "dbe5317a-d19b-462b-852e-8adecf14d5c6",
+          "width": 80,
+          "x": 848,
+          "y": 29,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "e80af099-fd28-4dbe-a264-8c7a72c08f75",
+          "width": 80,
+          "x": 754,
+          "y": 25,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "add5e3ae-fdae-4c9f-adaa-3ed5f0c355de",
+          "width": 105,
+          "x": 720,
+          "y": 687,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "c37252da-563b-4fd9-8981-81c7780b2d7b",
+          "width": 105,
+          "x": 11,
+          "y": 110,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "1780b983-8760-40e0-bdf6-95f491bd7ba6",
+          "width": 105,
+          "x": 30,
+          "y": 662,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "e7a0f56e-461b-4e47-9bdf-3c78a1721aab",
+          "width": 105,
+          "x": 1207,
+          "y": 78,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "fcb1ef12-d572-428b-b819-ceb6bcb9caaa",
+          "width": 105,
+          "x": 1214,
+          "y": 342,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "bb8fe782-7980-4d40-83d4-35ac2b8b3b33",
+          "width": 105,
+          "x": 400,
+          "y": 677,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 23,
+          "layer": "",
+          "locked": false,
+          "name": "PlayerName",
+          "persistentUuid": "32c9a259-ab43-4ecd-89c8-7e684e8a2869",
+          "width": 105,
+          "x": 1061,
+          "y": 681,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -3.36946e-15,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "locked": false,
+          "name": "Card",
+          "persistentUuid": "16552b3a-ad2e-4676-94e5-72b178e7f615",
+          "width": 80,
+          "x": 151,
+          "y": 330,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "Background",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "images\\poker_background.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Card",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "images\\ACE CLUBS.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "PlayerName",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Player",
+          "font": "",
+          "characterSize": 32,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "GameName",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Game",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        }
+      ],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 36,
+          "ambientLightColorG": 7262392,
+          "ambientLightColorR": 32,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}

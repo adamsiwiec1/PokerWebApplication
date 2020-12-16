@@ -23,6 +23,7 @@ namespace PokerWebApp.GameFolder
 
 
 
+
             //populate board blank cards
             img_b1.ImageUrl = "~/Images/FACE DOWN.jpg";
             img_b2.ImageUrl = "~/Images/FACE DOWN.jpg";
@@ -49,7 +50,7 @@ namespace PokerWebApp.GameFolder
 
         protected void btn_Test_Click(object sender, EventArgs e)
         {
-            player1.InHand1 = 
+            //player1.InHand1 = 
 
 
         }
