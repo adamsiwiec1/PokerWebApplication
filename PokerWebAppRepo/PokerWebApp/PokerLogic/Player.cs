@@ -8,6 +8,7 @@ namespace PokerWebApp
 {
     public class Player
     {
+        public string Id { get; set; }
 
         public string Name { get; set; }
 
@@ -19,6 +20,8 @@ namespace PokerWebApp
 
         public Card InHand2 { get; set; }
         public Hands BestHand { get; set; }
+
+        public Player[] playerList = new Player[6];
 
         public Player() { }
 
