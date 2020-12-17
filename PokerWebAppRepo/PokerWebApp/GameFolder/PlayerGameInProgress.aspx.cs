@@ -48,11 +48,9 @@ namespace PokerWebApp.GameFolder
         {
             //populate the players opponenets when they join the game lobby
 
-            //we would use the webSocket server here to listen to the Tcp connection & get all the opponents userid's
-
             List<Player> listOfAllUsers = UserAccess.GetAllPlayerInfo();
 
-            //List<Player> listOfAllUsersRevised = listOfAllUsers.Where(p => p.GameID == 101).Select(p => p.PlayerList);
+            List<Player> listOfAllUsersRevised = listOfAllUsers.Where(p => p.PlayerList)
 
             //IEnumerable<Player> listOfAllUsersRevised = from player in listOfAllUsers where player.GameID == 101 select player;
 

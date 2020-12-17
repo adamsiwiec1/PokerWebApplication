@@ -29,9 +29,12 @@ namespace PokerWebApp
         public Card InHand2 { get; set; }
         public Hands BestHand { get; set; }
 
-        public List<Player> PlayerList = new List<Player>();
+        public List<Player> PlayerList { get; set; }
 
-        public Player() { }
+        public Player() 
+        {
+            PlayerList = new List<Player>();
+        }
 
         public Player(string pname) { Name = pname; }
 
