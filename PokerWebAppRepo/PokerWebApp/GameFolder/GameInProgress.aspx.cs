@@ -126,68 +126,68 @@ namespace PokerWebApp
 
 
 
-            player1 = dealer.DealToPlayer(player1, deck);
-            player1 = GameAccess.UpdateThenGetPlayerCardsByName(p1Name, player1.InHand1.Face.ToString(), player1.InHand1.Suit.ToString(), player1.InHand2.Face.ToString(), player1.InHand2.Suit.ToString());
-            player1.Name = p1Name;
-            string cardURL = Card.prcard(player1.InHand1);
-            img_C1P1.ImageUrl = "Images/" + cardURL + ".jpeg";
-            cardURL = Card.prcard(player1.InHand2);
-            img_C2P1.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //player1 = dealer.DealToPlayer(player1, deck);
+            //player1 = GameAccess.UpdateThenGetPlayerCardsByName(p1Name, player1.InHand1.Face.ToString(), player1.InHand1.Suit.ToString(), player1.InHand2.Face.ToString(), player1.InHand2.Suit.ToString());
+            //player1.Name = p1Name;
+            //string cardURL = Card.prcard(player1.InHand1);
+            //img_C1P1.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player1.InHand2);
+            //img_C2P1.ImageUrl = "Images/" + cardURL + ".jpeg";
             
 
 
-            player2 = dealer.DealToPlayer(player2, deck);
-            player2 = GameAccess.UpdateThenGetPlayerCardsByName(p2Name, player2.InHand1.Face.ToString(), player2.InHand1.Suit.ToString(), player2.InHand2.Face.ToString(), player2.InHand2.Suit.ToString());
-            player2.Name = p2Name;
+            //player2 = dealer.DealToPlayer(player2, deck);
+            //player2 = GameAccess.UpdateThenGetPlayerCardsByName(p2Name, player2.InHand1.Face.ToString(), player2.InHand1.Suit.ToString(), player2.InHand2.Face.ToString(), player2.InHand2.Suit.ToString());
+            //player2.Name = p2Name;
 
-            cardURL = Card.prcard(player2.InHand1);
-            img_C1P2.ImageUrl = "Images/" + cardURL + ".jpeg";
-            cardURL = Card.prcard(player2.InHand2);
-            img_C2P2.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player2.InHand1);
+            //img_C1P2.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player2.InHand2);
+            //img_C2P2.ImageUrl = "Images/" + cardURL + ".jpeg";
             
 
 
-            player3 = dealer.DealToPlayer(player3, deck);
-            player3 = GameAccess.UpdateThenGetPlayerCardsByName(p3Name, player3.InHand1.Face.ToString(), player3.InHand1.Suit.ToString(), player3.InHand2.Face.ToString(), player3.InHand2.Suit.ToString());
-            player3.Name = p3Name;
-            cardURL = Card.prcard(player3.InHand1);
-            img_C1P3.ImageUrl = "Images/" + cardURL + ".jpeg";
-            cardURL = Card.prcard(player3.InHand2);
-            img_C2P3.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //player3 = dealer.DealToPlayer(player3, deck);
+            //player3 = GameAccess.UpdateThenGetPlayerCardsByName(p3Name, player3.InHand1.Face.ToString(), player3.InHand1.Suit.ToString(), player3.InHand2.Face.ToString(), player3.InHand2.Suit.ToString());
+            //player3.Name = p3Name;
+            //cardURL = Card.prcard(player3.InHand1);
+            //img_C1P3.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player3.InHand2);
+            //img_C2P3.ImageUrl = "Images/" + cardURL + ".jpeg";
             
 
 
-            player4 = dealer.DealToPlayer(player4, deck);
-            player4 = GameAccess.UpdateThenGetPlayerCardsByName(p4Name, player4.InHand1.Face.ToString(), player4.InHand1.Suit.ToString(), player4.InHand2.Face.ToString(), player4.InHand2.Suit.ToString());
-            player4.Name = p4Name;
-            cardURL = Card.prcard(player4.InHand1);
-            img_C1P4.ImageUrl = "Images/" + cardURL + ".jpeg";
-            cardURL = Card.prcard(player4.InHand2);
-            img_C2P4.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //player4 = dealer.DealToPlayer(player4, deck);
+            //player4 = GameAccess.UpdateThenGetPlayerCardsByName(p4Name, player4.InHand1.Face.ToString(), player4.InHand1.Suit.ToString(), player4.InHand2.Face.ToString(), player4.InHand2.Suit.ToString());
+            //player4.Name = p4Name;
+            //cardURL = Card.prcard(player4.InHand1);
+            //img_C1P4.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player4.InHand2);
+            //img_C2P4.ImageUrl = "Images/" + cardURL + ".jpeg";
             
 
-            player5 = dealer.DealToPlayer(player5, deck);
-            player5 = GameAccess.UpdateThenGetPlayerCardsByName(p5Name, player5.InHand1.Face.ToString(), player5.InHand1.Suit.ToString(), player5.InHand2.Face.ToString(), player5.InHand2.Suit.ToString());
-            player5.Name = p5Name;
-            cardURL = Card.prcard(player5.InHand1);
-            img_C1P5.ImageUrl = "Images/" + cardURL + ".jpeg";
-            cardURL = Card.prcard(player5.InHand2);
-            img_C2P5.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //player5 = dealer.DealToPlayer(player5, deck);
+            //player5 = GameAccess.UpdateThenGetPlayerCardsByName(p5Name, player5.InHand1.Face.ToString(), player5.InHand1.Suit.ToString(), player5.InHand2.Face.ToString(), player5.InHand2.Suit.ToString());
+            //player5.Name = p5Name;
+            //cardURL = Card.prcard(player5.InHand1);
+            //img_C1P5.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player5.InHand2);
+            //img_C2P5.ImageUrl = "Images/" + cardURL + ".jpeg";
             
 
-            player6 = dealer.DealToPlayer(player6, deck);
-            player6 = GameAccess.UpdateThenGetPlayerCardsByName(p6Name, player6.InHand1.Face.ToString(), player6.InHand1.Suit.ToString(), player6.InHand2.Face.ToString(), player6.InHand2.Suit.ToString());
-            player6.Name = p6Name;
-            cardURL = Card.prcard(player6.InHand1);
-            img_C1P6.ImageUrl = "Images/" + cardURL + ".jpeg";
-            cardURL = Card.prcard(player6.InHand2);
-            img_C2P6.ImageUrl = "Images/" + cardURL + ".jpeg";
-            playerlist[0] = player1;
-            playerlist[1] = player2;
-            playerlist[2] = player3;
-            playerlist[3] = player4;
-            playerlist[4] = player5;
-            playerlist[5] = player6;
+            //player6 = dealer.DealToPlayer(player6, deck);
+            //player6 = GameAccess.UpdateThenGetPlayerCardsByName(p6Name, player6.InHand1.Face.ToString(), player6.InHand1.Suit.ToString(), player6.InHand2.Face.ToString(), player6.InHand2.Suit.ToString());
+            //player6.Name = p6Name;
+            //cardURL = Card.prcard(player6.InHand1);
+            //img_C1P6.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //cardURL = Card.prcard(player6.InHand2);
+            //img_C2P6.ImageUrl = "Images/" + cardURL + ".jpeg";
+            //playerlist[0] = player1;
+            //playerlist[1] = player2;
+            //playerlist[2] = player3;
+            //playerlist[3] = player4;
+            //playerlist[4] = player5;
+            //playerlist[5] = player6;
             foreach (Player player in playerlist)
             {
                 if (dealer.StraightFlush(board, player))

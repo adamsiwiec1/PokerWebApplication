@@ -5,15 +5,12 @@
     
     <br />
 
-    <h3>Please click 'Join Game' so we can extort you and steal all your money.</h3>
+    <h3>Please click 'Join Game' to enter a game lobby..</h3>
 
      <div class ="form-horizontal">
 
 
-
      </div>
-
-
 
     <asp:Button ID="btn_playerJoinGame" runat="server" Text="Join Game" OnClick="btn_playerJoinGame_Click"/>
 

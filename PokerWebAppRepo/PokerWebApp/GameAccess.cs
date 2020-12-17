@@ -160,6 +160,7 @@ namespace PokerWebApp
             DataRow dr = table.Rows[0];
 
 
+            string id = dr["id"].ToString();
             string name = dr["Name"].ToString();
             string venmo = dr["Venmo"].ToString();
             string balance = dr["balance"].ToString();
@@ -168,6 +169,7 @@ namespace PokerWebApp
             string face2 = dr["C2_Value"].ToString();
             string suit2 = dr["C2_Suit"].ToString();
 
+            player.Id = id;
             player.Name = name;
             player.Venmo = venmo;
             player.Balance = decimal.Parse(balance);

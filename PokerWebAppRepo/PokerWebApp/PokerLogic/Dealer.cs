@@ -25,7 +25,7 @@ namespace PokerWebApp
                 }
             }
         }
-        public Player DealToPlayer(Player pr, Deck currDeck)
+        public void DealToPlayer(Player player, Deck currDeck)
         {
             Random rand = new Random();
 
@@ -39,11 +39,9 @@ namespace PokerWebApp
             Card temp2 = currDeck.deck[RandomSecondCard];
             currDeck.deck.Remove(currDeck.deck[RandomSecondCard]);
 
-            Player player = new Player();
             player.InHand1 = temp1;
             player.InHand2 = temp2;
 
-            return player;
         }
 
         public static string UpdateHands(Card thiscard)
