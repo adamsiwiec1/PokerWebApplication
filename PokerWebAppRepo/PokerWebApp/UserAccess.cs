@@ -27,14 +27,16 @@ namespace PokerWebApp
             table.Load(reader);
             cmd.Connection.Close();
 
-            Player player = new Player();
+           
             List<Player> allPlayers = new List<Player>();
 
-            DataRow dr = table.Rows[0];
+            
 
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
+                DataRow dr = table.Rows[i];
+                Player player = new Player();
                 string id = dr["Id"].ToString();
                 string pdetailid = dr["PlayerDetailID"].ToString();
                 string gameid = dr["GameID"].ToString();
