@@ -50,7 +50,7 @@ namespace PokerWebApp.GameFolder
 
             List<Player> listOfAllUsers = UserAccess.GetAllPlayerInfo();
 
-            List<Player> listOfAllUsersRevised = listOfAllUsers.Where(p => p.PlayerList)
+            List<Player> listOfAllUsersRevised = listOfAllUsers.Where(p => p.PlayerList);
 
             //IEnumerable<Player> listOfAllUsersRevised = from player in listOfAllUsers where player.GameID == 101 select player;
 
