@@ -253,24 +253,44 @@ namespace PokerWebApp
                 
                 if(winhand.Equals(PokerLogic.Hands.PAIR)){
                     int highest = 0;
+                    int kicker = 0;
                     foreach(Player player in multiWin)
                     {
                         List<int> values = new List<int>();
-                        
+                        List<int> boardvalues = new List<int>();
                             values.Add((int)player.InHand1.Face);
                             values.Add((int)player.InHand2.Face);
                         
                         foreach (Card card in board.currBoard)
                         {
                             values.Add((int)card.Face);
+                            boardvalues.Add((int)card.Face);
                         }
+                        kicker = boardvalues.Max();
                         IEnumerable<int> duplicates = values.GroupBy(x => x).Where(g => g.Count() > 1).Select(x => x.Key);
-
-                        if(duplicates.First() > highest)
+                        int found = duplicates.First();
+                        for (int x = 0; x< values.Count(); x++)
                         {
-                            winner = player;
-                            highest = duplicates.First();
+                            if (values[x] == found)
+                            {
+                                values.Remove(values[x]);
+                            }
+
+                            if (found > highest)
+                            {
+                                winner = player;
+                                highest = found;
+
+                            }else if(found == highest)
+                            {
+                                if (values.Max() > kicker)
+                                {
+                                    winner = player;
+                                    kicker = values.Max();
+                                }
+                            }
                         }
+                        kicker = values.Max();
                     }
                     
 
@@ -278,23 +298,57 @@ namespace PokerWebApp
                 if (winhand.Equals(PokerLogic.Hands.TWO_PAIR))
                 {
                     int highest = 0;
+                    int secondhighest = 0;
+                    int kicker = 0;
                     foreach (Player player in multiWin)
                     {
                         List<int> values = new List<int>();
-
+                        List<int> boardvalues = new List<int>();
                         values.Add((int)player.InHand1.Face);
                         values.Add((int)player.InHand2.Face);
 
+                      
                         foreach (Card card in board.currBoard)
                         {
                             values.Add((int)card.Face);
+                            boardvalues.Add((int)card.Face);
                         }
+
                         IEnumerable<int> duplicates = values.GroupBy(x => x).Where(g => g.Count() > 1).Select(x => x.Key);
-                        if(duplicates.Max() > highest)
+                        int[] foundarray = duplicates.ToArray();
+                        List<int> found = new List<int>();
+
+                        foreach(int num in foundarray)
+                        {
+                            found.Add(num);
+                        }
+                        
+                        for (int x = 0; x < values.Count; x++)
+                        {
+                            if (found.Contains(values[x]))
+                            {
+                                values.Remove(values[x]);
+                            }
+                        }
+                        
+                        if (found.Max() > highest)
                         {
                             winner = player;
-                            highest = duplicates.Max();
+                            highest = found.Max();
+                            secondhighest = found.Min();
+                        }else if(found.Max() == highest && found.Min() > secondhighest)
+                        {
+                            winner = player;
+                            secondhighest = found.Min();
+                        }else if(found.Max() == highest && found.Min() == secondhighest)
+                        {                            
+                            if(values.Max() > kicker)
+                            {
+                                winner = player;
+                                kicker = values.Max();
+                            }
                         }
+                        kicker = values.Max();
                         
                     }
                 }
