@@ -256,6 +256,7 @@
     <Content Include="_gDevelop\GameDesign.aspx" />
     <Content Include="_multiplayer\WebSocket\client.aspx" />
     <Content Include="_multiplayer\WebSocket\Scripts\websocket.js" />
+    <Content Include="_multiplayer\WebSocket\websocketExample.html" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="PokerHome.aspx" />
     <Content Include="Scripts\bootstrap.js" />

@@ -15,7 +15,7 @@
 <button>send</button>
 <div id="output"></div>
 <script>
-    // http://www.websocket.org/echo.html
+    //http://www.websocket.org/echo.html
 
     var button = document.querySelector("button"),
         output = document.querySelector("#output"),
@@ -60,17 +60,6 @@
         textarea.focus();
     }
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </asp:Content>
