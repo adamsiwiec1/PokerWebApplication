@@ -502,6 +502,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="PokerLogic\Hands.cs" />
     <Compile Include="PokerLogic\Player.cs" />
+    <Compile Include="PokerLogic\Winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
