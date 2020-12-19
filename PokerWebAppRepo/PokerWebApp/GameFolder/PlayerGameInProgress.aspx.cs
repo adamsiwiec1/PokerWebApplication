@@ -10,18 +10,13 @@ namespace PokerWebApp.GameFolder
 {
     public partial class PlayerGameInProgress : System.Web.UI.Page
     {
-        //call constructor of player model class
-        Player player = new Player();
-        List<Player> listOfAllUsers = UserAccess.GetAllPlayerInfo();
         List<Player> allPlayers = new List<Player>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             PopulateControls();
             PopulatePlayers();
-            
         }
-
         protected void PopulateControls()
         {
             //populate board blank cards
@@ -49,6 +44,7 @@ namespace PokerWebApp.GameFolder
         protected void PopulatePlayers()
         {
             //populate the players opponenets when they join the game lobby
+            List<Player> listOfAllUsers = UserAccess.GetAllPlayerInfo();
 
             foreach(Player player in listOfAllUsers)
             {
