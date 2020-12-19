@@ -50,10 +50,6 @@ namespace PokerWebApp.GameFolder
         {
             //populate the players opponenets when they join the game lobby
 
-            List<Player> listOfAllUsers = UserAccess.GetAllPlayerInfo();
-
-            List<Player> listOfAllUsersRevised = listOfAllUsers.Where(p => p.PlayerList)
-
             foreach(Player player in listOfAllUsers)
             {
                 if(player.GameID == 100)
