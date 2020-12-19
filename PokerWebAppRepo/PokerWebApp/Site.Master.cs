@@ -79,7 +79,7 @@ namespace PokerWebApp
             if (HttpContext.Current.User.IsInRole("Player"))
             {
                 userProfile.Visible = true;
-                pokerHomePlayNow.Visible = true;
+                pokerJoinGame.Visible = true;
             }
 
         }

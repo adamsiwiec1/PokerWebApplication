@@ -44,11 +44,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.Resources.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -182,10 +177,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ErrorView\DeafultError.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GameFolder\GameInProgress.aspx" />
+    <Content Include="GameFolder\GameLobby.aspx" />
     <Content Include="GameFolder\JoinGame.aspx" />
+    <Content Include="GameFolder\PlayerGameInProgress.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -200,6 +198,7 @@
     <Content Include="Images\ACE DIAMONDS.jpeg" />
     <Content Include="Images\ACE HEARTS.jpeg" />
     <Content Include="Images\ACE SPADES.jpeg" />
+    <Content Include="Images\FACE DOWN.jpg" />
     <Content Include="Images\EIGHT CLUBS.jpeg" />
     <Content Include="Images\EIGHT DIAMONDS.jpeg" />
     <Content Include="Images\EIGHT HEARTS.jpeg" />
@@ -249,6 +248,10 @@
     <Content Include="Images\TWO DIAMONDS.jpeg" />
     <Content Include="Images\TWO HEARTS.jpeg" />
     <Content Include="Images\TWO SPADES.jpeg" />
+    <Content Include="_gDevelop\GameDesign.aspx" />
+    <Content Include="_multiplayer\WebSocket\client.aspx" />
+    <Content Include="_multiplayer\WebSocket\Scripts\websocket.js" />
+    <Content Include="_multiplayer\WebSocket\websocketExample.html" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="PokerHome.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -285,6 +288,7 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="_gDevelop\game.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -431,6 +435,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ErrorView\DeafultError.aspx.cs">
+      <DependentUpon>DeafultError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorView\DeafultError.aspx.designer.cs">
+      <DependentUpon>DeafultError.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GameFolder\GameInProgress.aspx.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -438,12 +449,26 @@
     <Compile Include="GameFolder\GameInProgress.aspx.designer.cs">
       <DependentUpon>GameInProgress.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GameFolder\GameLobby.aspx.cs">
+      <DependentUpon>GameLobby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameFolder\GameLobby.aspx.designer.cs">
+      <DependentUpon>GameLobby.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GameFolder\JoinGame.aspx.cs">
       <DependentUpon>JoinGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GameFolder\JoinGame.aspx.designer.cs">
       <DependentUpon>JoinGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameFolder\PlayerGameInProgress.aspx.cs">
+      <DependentUpon>PlayerGameInProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameFolder\PlayerGameInProgress.aspx.designer.cs">
+      <DependentUpon>PlayerGameInProgress.aspx</DependentUpon>
     </Compile>
     <Compile Include="PokerHome.aspx.cs">
       <DependentUpon>PokerHome.aspx</DependentUpon>
@@ -507,6 +532,21 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_multiplayer\WebSocket\client.aspx.cs">
+      <DependentUpon>client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_multiplayer\WebSocket\client.aspx.designer.cs">
+      <DependentUpon>client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_multiplayer\WebSocket\wsserver.cs" />
+    <Compile Include="_gDevelop\GameDesign.aspx.cs">
+      <DependentUpon>GameDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_gDevelop\GameDesign.aspx.designer.cs">
+      <DependentUpon>GameDesign.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
