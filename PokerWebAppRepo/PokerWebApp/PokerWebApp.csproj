@@ -180,7 +180,7 @@
     <Content Include="ErrorView\DeafultError.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GameFolder\GameInProgress.aspx" />
+    <Content Include="%28OLD%29GameInProgress.aspx" />
     <Content Include="GameFolder\GameLobby.aspx" />
     <Content Include="GameFolder\JoinGame.aspx" />
     <Content Include="GameFolder\PlayerGameInProgress.aspx" />
@@ -442,12 +442,12 @@
     <Compile Include="ErrorView\DeafultError.aspx.designer.cs">
       <DependentUpon>DeafultError.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GameFolder\GameInProgress.aspx.cs">
-      <DependentUpon>GameInProgress.aspx</DependentUpon>
+    <Compile Include="%28OLD%29GameInProgress.aspx.cs">
+      <DependentUpon>%28OLD%29GameInProgress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GameFolder\GameInProgress.aspx.designer.cs">
-      <DependentUpon>GameInProgress.aspx</DependentUpon>
+    <Compile Include="%28OLD%29GameInProgress.aspx.designer.cs">
+      <DependentUpon>%28OLD%29GameInProgress.aspx</DependentUpon>
     </Compile>
     <Compile Include="GameFolder\GameLobby.aspx.cs">
       <DependentUpon>GameLobby.aspx</DependentUpon>
@@ -477,8 +477,6 @@
     <Compile Include="PokerHome.aspx.designer.cs">
       <DependentUpon>PokerHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Poker\Board.cs" />
-    <Compile Include="Poker\Card.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -486,8 +484,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Poker\Dealer.cs" />
-    <Compile Include="Poker\Deck.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -500,8 +496,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="PokerLogic\Board.cs" />
+    <Compile Include="PokerLogic\Card.cs" />
+    <Compile Include="PokerLogic\Dealer.cs" />
+    <Compile Include="PokerLogic\Deck.cs" />
     <Compile Include="PokerLogic\Hands.cs" />
     <Compile Include="PokerLogic\Player.cs" />
+    <Compile Include="PokerLogic\Winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
