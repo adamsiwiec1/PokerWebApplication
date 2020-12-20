@@ -9,26 +9,26 @@ namespace PokerWebApp.PokerLogic
     {
         public Player FindWinner(Dealer dealer, Board board, List<Player> playerList)
         {
-            string handWinner;
+            Player handWinner = new Player();
 
 
             foreach (Player player in playerList)
             {
                 if (dealer.StraightFlush(board, player))
                 {
-                    player.BestHand = PokerLogic.Hands.STRAIGHT_FLUSH;
+                    player.BestHand = Hands.STRAIGHT_FLUSH;
                 }
-                else if (dealer.findHand(board, player).Equals(PokerLogic.Hands.FOUR_OF_A_KIND))
+                else if (dealer.findHand(board, player).Equals(Hands.FOUR_OF_A_KIND))
                 {
-                    player.BestHand = PokerLogic.Hands.FOUR_OF_A_KIND;
+                    player.BestHand = Hands.FOUR_OF_A_KIND;
                 }
-                else if (dealer.findHand(board, player).Equals(PokerLogic.Hands.FULL_HOUSE))
+                else if (dealer.findHand(board, player).Equals(Hands.FULL_HOUSE))
                 {
-                    player.BestHand = PokerLogic.Hands.FULL_HOUSE;
+                    player.BestHand = Hands.FULL_HOUSE;
                 }
                 else if (dealer.Flush(board, player))
                 {
-                    player.BestHand = PokerLogic.Hands.FLUSH;
+                    player.BestHand = Hands.FLUSH;
 
                 }
                 else if (dealer.Straight(board, player))
@@ -44,8 +44,10 @@ namespace PokerWebApp.PokerLogic
 
             int lowest = (int)playerList[0].BestHand;
             List<Player> winner = playerList;
-            List<Player> test = new List<Player>();
+            //List<Player> test = new List<Player>();
+
             List<Player> multiWin = new List<Player>();
+
             foreach (Player player in playerList)
             {
                 if ((int)player.BestHand < lowest)
@@ -60,23 +62,24 @@ namespace PokerWebApp.PokerLogic
                 {
                     multiWin.Add(player);
                 }
-
             }
             if (multiWin.Count == 0)
             {
                 string winnertext = winner[0].Name + " wins with " + winner[0].BestHand.ToString();
-                handWinner = winnertext;
+                handWinner.Name = winnertext;
             }
             else
             {
-                PokerLogic.Hands winhand = multiWin.BestHand;
+                List<Player> players = multiWin;
 
-                if (winhand.Equals(PokerLogic.Hands.PAIR))
+                Hands winhand = players[0].BestHand;
+
+                if (winhand.Equals(Hands.PAIR))
                 {
                     int highest = 0;
                     int kicker = 0;
                     foreach (Player player in multiWin)
-                    {
+                    { 
                         List<int> values = new List<int>();
                         List<int> boardvalues = new List<int>();
                         values.Add((int)player.InHand1.Face);
@@ -99,7 +102,7 @@ namespace PokerWebApp.PokerLogic
 
                             if (found > highest)
                             {
-                                winner = player[0];
+                                handWinner = player;
                                 highest = found;
 
                             }
@@ -107,7 +110,7 @@ namespace PokerWebApp.PokerLogic
                             {
                                 if (values.Max() > kicker)
                                 {
-                                    winner = player;
+                                    handWinner = player;
                                     kicker = values.Max();
                                 }
                             }
@@ -115,7 +118,7 @@ namespace PokerWebApp.PokerLogic
                         kicker = values.Max();
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.TWO_PAIR))
+                if (winhand.Equals(Hands.TWO_PAIR))
                 {
                     int highest = 0;
                     int secondhighest = 0;
@@ -150,23 +153,22 @@ namespace PokerWebApp.PokerLogic
                                 values.Remove(values[x]);
                             }
                         }
-
                         if (found.Max() > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = found.Max();
                             secondhighest = found.Min();
                         }
                         else if (found.Max() == highest && found.Min() > secondhighest)
                         {
-                            winner = player;
+                            handWinner = player;
                             secondhighest = found.Min();
                         }
                         else if (found.Max() == highest && found.Min() == secondhighest)
                         {
                             if (values.Max() > kicker)
                             {
-                                winner = player;
+                                handWinner = player;
                                 kicker = values.Max();
                             }
                         }
@@ -174,7 +176,7 @@ namespace PokerWebApp.PokerLogic
 
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.THREE_OF_A_KIND))
+                if (winhand.Equals(Hands.THREE_OF_A_KIND))
                 {
                     int highest = 0;
                     foreach (Player player in multiWin)
@@ -192,12 +194,12 @@ namespace PokerWebApp.PokerLogic
 
                         if (duplicates.First() > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = duplicates.First();
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.HIGH_CARD))
+                if (winhand.Equals(Hands.HIGH_CARD))
                 {
                     int boardsum = 0;
                     int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
@@ -209,12 +211,12 @@ namespace PokerWebApp.PokerLogic
                     {
                         if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.STRAIGHT))
+                if (winhand.Equals(Hands.STRAIGHT))
                 {
                     int boardsum = 0;
                     int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
@@ -226,12 +228,12 @@ namespace PokerWebApp.PokerLogic
                     {
                         if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.FULL_HOUSE))
+                if (winhand.Equals(Hands.FULL_HOUSE))
                 {
                     int boardsum = 0;
                     int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
@@ -243,12 +245,12 @@ namespace PokerWebApp.PokerLogic
                     {
                         if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.FOUR_OF_A_KIND))
+                if (winhand.Equals(Hands.FOUR_OF_A_KIND))
                 {
                     int highest = 0;
                     foreach (Player player in multiWin)
@@ -266,12 +268,12 @@ namespace PokerWebApp.PokerLogic
 
                         if (duplicates.First() > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = duplicates.First();
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.STRAIGHT_FLUSH))
+                if (winhand.Equals(Hands.STRAIGHT_FLUSH))
                 {
                     int boardsum = 0;
                     int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
@@ -283,12 +285,12 @@ namespace PokerWebApp.PokerLogic
                     {
                         if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.FLUSH))
+                if (winhand.Equals(Hands.FLUSH))
                 {
                     int boardsum = 0;
                     int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
@@ -300,12 +302,12 @@ namespace PokerWebApp.PokerLogic
                     {
                         if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
                         }
                     }
                 }
-                if (winhand.Equals(PokerLogic.Hands.ROYAL_FLUSH))
+                if (winhand.Equals(Hands.ROYAL_FLUSH))
                 {
                     int boardsum = 0;
                     int highest = (int)multiWin[0].InHand1.Face + (int)multiWin[0].InHand2.Face + boardsum;
@@ -317,21 +319,13 @@ namespace PokerWebApp.PokerLogic
                     {
                         if ((int)player.InHand1.Face + (int)player.InHand2.Face + boardsum > highest)
                         {
-                            winner = player;
+                            handWinner = player;
                             highest = (int)player.InHand1.Face + (int)player.InHand2.Face + boardsum;
                         }
                     }
                 }
-                string handWinner = winner.Name + " wins with " + winner.BestHand.ToString();
-                Label1.Text = winnertext;
             }
-
-
-
+            return handWinner;
         }
-
-
-
-
     }
 }

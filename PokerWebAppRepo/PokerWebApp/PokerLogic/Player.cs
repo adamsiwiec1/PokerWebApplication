@@ -29,6 +29,9 @@ namespace PokerWebApp
         public Card InHand2 { get; set; }
         public Hands BestHand { get; set; }
 
+        public string WinnerMessage => "Player:" + Name + "wins with" + BestHand.ToString();
+
+
         public List<Player> PlayerList { get; set; }
 
         public Player() 
