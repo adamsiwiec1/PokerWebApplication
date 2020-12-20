@@ -11,9 +11,15 @@ namespace PokerWebApp.GameFolder
 {
     public partial class PlayerGameInProgress : System.Web.UI.Page
     {
+        //Game Properties/Instance Variables
         List<Player> allPlayers = new List<Player>();
 
-        bool showCards = false;
+        //List of all card images in game
+        List<Image> cardImages = new List<Image>();
+
+
+        //face down Image URL
+        string faceDown = "~/Images/FACE DOWN.jpg";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,64 +28,35 @@ namespace PokerWebApp.GameFolder
         }
         protected void PopulateControls()
         {
-            //Populate all cards face down
-            string faceDown = "~/Images/FACE DOWN.jpg";
-
-            if (showCards == false)
-            {
-                List<Image> cardImages = new List<Image>();
-
-                cardImages.Add(img_b1);
-                cardImages.Add(img_b2);
-                cardImages.Add(img_b3);
-                cardImages.Add(img_b4);
-                cardImages.Add(img_b5);
-                cardImages.Add(img_C1P1);
-                cardImages.Add(img_C2P1);
-                cardImages.Add(img_C1P2);
-                cardImages.Add(img_C2P2);
-                cardImages.Add(img_C1P3);
-                cardImages.Add(img_C2P3);
-                cardImages.Add(img_C1P4);
-                cardImages.Add(img_C2P4);
-                cardImages.Add(img_C1P5);
-                cardImages.Add(img_C2P5);
-                cardImages.Add(img_C1P6);
-                cardImages.Add(img_C2P6);
-
-                foreach (Image image in cardImages)
-                {
-                    image.ImageUrl = faceDown;
-
-                }
-            }
+            //Moved blank cards to start game button click
         }
 
         protected void PopulatePlayers()
         {
+
             //populate the players opponenets when they join the game lobby
             List<Player> listOfAllUsers = UserAccess.GetAllPlayerInfo();
 
-            foreach(Player player in listOfAllUsers)
+            foreach (Player player in listOfAllUsers)
             {
-                if(player.GameID == 100)
+                if (player.GameID == 100)
                 {
                     allPlayers.Add(player);
                 }
             }
-            
+
             allPlayers[0] = GameAccess.GetPlayerDetailsByID(allPlayers[0].Id);
             allPlayers[1] = GameAccess.GetPlayerDetailsByID(allPlayers[1].Id);
             allPlayers[2] = GameAccess.GetPlayerDetailsByID(allPlayers[2].Id);
             allPlayers[3] = GameAccess.GetPlayerDetailsByID(allPlayers[3].Id);
             allPlayers[4] = GameAccess.GetPlayerDetailsByID(allPlayers[4].Id);
             allPlayers[5] = GameAccess.GetPlayerDetailsByID(allPlayers[5].Id);
-          
+
             //Player 1
             lbl_PrintCurrentUsersName.Text = allPlayers[0].Name;
             hd_namep3.InnerText = allPlayers[0].Name;
             lbl_balancep3.Text = allPlayers[0].Balance.ToString();
-            
+
             //Player 
             hd_namep1.InnerText = allPlayers[1].Name;
             lbl_balancep1.Text = allPlayers[1].Balance.ToString();
@@ -118,7 +95,6 @@ namespace PokerWebApp.GameFolder
 
         protected void btn_Deal_Click(object sender, EventArgs e)
         {
-            PopulatePlayers();
 
             //initialize dealing compenents
             Dealer dealer = new Dealer();
@@ -148,9 +124,9 @@ namespace PokerWebApp.GameFolder
 
             //set board 4 and 5 to face down visible images  -- we will soon created turn counter to track when we need to display the 4th and 5th card
             if (img_b4.Visible != true)
-            {  img_b4.ImageUrl = "Images/FACE DOWN.jpg"; img_b4.Visible = true; }
+            { img_b4.ImageUrl = "Images/FACE DOWN.jpg"; img_b4.Visible = true; }
             if (img_b5.Visible != true)
-            {    img_b5.ImageUrl = "Images/FACE DOWN.jpg"; img_b5.Visible = true; }
+            { img_b5.ImageUrl = "Images/FACE DOWN.jpg"; img_b5.Visible = true; }
 
             //deal cards to players
             foreach (Player player in allPlayers)
@@ -158,36 +134,55 @@ namespace PokerWebApp.GameFolder
                 dealer.DealToPlayer(player, deck);
                 GameAccess.UpdateThenGetPlayerCardsByName(player.Name, player.InHand1.Face.ToString(), player.InHand1.Suit.ToString(), player.InHand2.Face.ToString(), player.InHand2.Suit.ToString());
             }
-            //display the dealt cards to the players 
 
-                //only display cards to currently logged in user
+            //get id of current user - only display cards to currently logged in user
+            string currentUser = User.Identity.GetUserId().ToString();
 
-                //get id of current user
-                string currentUser = User.Identity.GetUserId().ToString();
+            //Made image list to display face down images
+            List<Image> images = new List<Image>();
 
             if (currentUser == allPlayers[0].Id)
             {
-                //player 3 - log test
+                //player 1
                 string cardurl = Card.prcard(allPlayers[0].InHand1);
-                img_C1P3.ImageUrl = "Images/" + cardurl + ".jpeg";
+                img_C1P1.ImageUrl = "Images/" + cardurl + ".jpeg";
                 cardurl = Card.prcard(allPlayers[0].InHand2);
-                img_C2P3.ImageUrl = "Images/" + cardurl + ".jpeg";
-             }
+                img_C2P1.ImageUrl = "Images/" + cardurl + ".jpeg";
+
+
+                images.Add(img_C1P1);
+                images.Add(img_C2P1);
+                images.Add(img_C1P2);
+                images.Add(img_C2P2);
+                images.Add(img_C1P3);
+                images.Add(img_C2P3);
+                images.Add(img_C1P4);
+                images.Add(img_C2P4);
+                images.Add(img_C1P5);
+                images.Add(img_C2P5);
+                images.Add(img_C1P6);
+                images.Add(img_C2P6);
+
+                foreach (Image image in images.Where(p => p.ImageUrl != img_C1P1.ImageUrl && p.ImageUrl != img_C1P2.ImageUrl))
+                {
+                    image.ImageUrl = faceDown;
+                }
+            }
             if (currentUser == allPlayers[1].Id)
             {
-                //player 1
+                //player 2
                 string cardurl = Card.prcard(allPlayers[1].InHand1);
-                img_C1P1.ImageUrl = "Images/" + cardurl + ".jpeg";
+                img_C1P2.ImageUrl = "Images/" + cardurl + ".jpeg";
                 cardurl = Card.prcard(allPlayers[1].InHand2);
-                img_C2P1.ImageUrl = "Images/" + cardurl + ".jpeg";
+                img_C2P2.ImageUrl = "Images/" + cardurl + ".jpeg";
             }
             if (currentUser == allPlayers[2].Id)
             {
-                //player 2
+                //player 3
                 string cardurl = Card.prcard(allPlayers[2].InHand1);
-                img_C1P2.ImageUrl = "Images/" + cardurl + ".jpeg";
+                img_C1P3.ImageUrl = "Images/" + cardurl + ".jpeg";
                 cardurl = Card.prcard(allPlayers[2].InHand2);
-                img_C2P2.ImageUrl = "Images/" + cardurl + ".jpeg";
+                img_C2P3.ImageUrl = "Images/" + cardurl + ".jpeg";
             }
             if (currentUser == allPlayers[3].Id)
             {
@@ -214,22 +209,26 @@ namespace PokerWebApp.GameFolder
                 img_C2P6.ImageUrl = "Images/" + cardurl + ".jpeg";
             }
 
+            for (int i = 0; i < allPlayers.Count; i++)
+            {
+                foreach (Player player in allPlayers)
+                {
+                    int index = int.Parse(allPlayers[i].ToString());
 
+                    player.InHand1 = cardImages[index].ToString();
 
-            Player winner = Winner.FindWinner(dealer,board,allPlayers);
+                }
+            }
+            //call to winner class/method
+            Player winner = Winner.FindWinner(dealer, board, allPlayers);
 
+            // sets winner message to Pot text and visibility to false - press find winner to make visible
             hd_pot.Visible = false;
             hd_pot.InnerText = winner.WinnerMessage;
         }
         protected void btn_FindWinner_Click(object sender, EventArgs e)
         {
             hd_pot.Visible = true;
-
-
-        }
-        protected void btn_ShowAllCards_Click(object sender, EventArgs e)
-        {
-
             img_b1.Visible = true;
             img_b1.Visible = true;
             img_b1.Visible = true;
@@ -249,6 +248,39 @@ namespace PokerWebApp.GameFolder
             img_C1P6.Visible = true;
             img_C2P6.Visible = true;
         }
+        protected void btn_StartGame_Click(object sender, EventArgs e)
+        {
+            List<Image> cardImages = new List<Image>();
+
+            cardImages.Add(img_b1);
+            cardImages.Add(img_b2);
+            cardImages.Add(img_b3);
+            cardImages.Add(img_b4);
+            cardImages.Add(img_b5);
+            cardImages.Add(img_C1P1);
+            cardImages.Add(img_C2P1);
+            cardImages.Add(img_C1P2);
+            cardImages.Add(img_C2P2);
+            cardImages.Add(img_C1P3);
+            cardImages.Add(img_C2P3);
+            cardImages.Add(img_C1P4);
+            cardImages.Add(img_C2P4);
+            cardImages.Add(img_C1P5);
+            cardImages.Add(img_C2P5);
+            cardImages.Add(img_C1P6);
+            cardImages.Add(img_C2P6);
+
+            foreach (Image image in cardImages)
+            {
+                image.ImageUrl = faceDown;
+            }
+        }
+
+
+        protected void btn_ShowAllCards_Click(object sender, EventArgs e)
+        {
+
+        }
 
         protected void btn_Check_Click(object sender, EventArgs e)
         {
@@ -266,10 +298,7 @@ namespace PokerWebApp.GameFolder
         {
         }
 
-        protected void btn_StartGame_Click(object sender, EventArgs e)
-        {
-        }
-
+    }
         //protected void UpdateBalance()
         //{
 
@@ -282,5 +311,4 @@ namespace PokerWebApp.GameFolder
         //    lbl_balancep5.Text = playerList.ElementAt(4).Balance.ToString();
         //    lbl_balancep6.Text = playerList.ElementAt(5).Balance.ToString();
         //}
-    }
-}
+ }
