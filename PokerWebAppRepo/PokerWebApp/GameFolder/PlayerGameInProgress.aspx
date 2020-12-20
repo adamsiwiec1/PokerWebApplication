@@ -6,11 +6,21 @@
 
    <%-- Test buttons --%>
     <div>
+        <div>
      <asp:Button ID="btn_Test" runat="server" Text="Test" OnClick="btn_Test_Click" Width="62px"/>
         <asp:Label ID="Divider" runat="server" Text="            "></asp:Label>
         <asp:Button ID="btn_Deal" runat="server" Text="Deal" OnClick="btn_Deal_Click" Width="62px"/>
         <br /> <br />
         <asp:Button ID="btn_StartGame" runat="server" Text="Start Game" OnClick="btn_StartGame_Click" Width="93px"/>
+        </div>
+         
+       <div style="position:relative; float: right">
+           Test Buttons: 
+           <br />
+           <asp:Button ID="btn_FindWinner" runat="server" Text="Find Winner" OnClick="btn_FindWinner_Click" Width="93px"/>
+           <br />
+           <asp:Button ID="btn_ShowAllCards" runat="server" Text="Show Cards" OnClick="btn_ShowAllCards_Click" Width="93px"/>
+       </div>
     </div>
 
     <div>

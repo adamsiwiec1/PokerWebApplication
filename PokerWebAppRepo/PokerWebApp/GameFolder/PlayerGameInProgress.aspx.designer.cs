@@ -51,6 +51,24 @@ namespace PokerWebApp.GameFolder
         protected global::System.Web.UI.WebControls.Button btn_StartGame;
 
         /// <summary>
+        /// btn_FindWinner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_FindWinner;
+
+        /// <summary>
+        /// btn_ShowAllCards control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_ShowAllCards;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>

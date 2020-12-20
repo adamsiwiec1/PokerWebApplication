@@ -15,15 +15,6 @@ namespace PokerWebApp
     {
 
         /// <summary>
-        /// pokerJoinGame control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pokerJoinGame;
-
-        /// <summary>
         /// adminLink control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,24 @@ namespace PokerWebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor userProfile;
+
+        /// <summary>
+        /// pokerJoinGame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor pokerJoinGame;
+
+        /// <summary>
+        /// pokerCurrentGame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor pokerCurrentGame;
 
         /// <summary>
         /// MainContent control.

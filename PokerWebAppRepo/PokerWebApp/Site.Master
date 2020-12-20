@@ -52,9 +52,10 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat ="server" visible="false" id="pokerJoinGame" href="~/GameFolder/JoinGame">Join Game</a></li>
                         <li><a runat ="server" visible="false" id="adminLink" href="~/AdminFolder/AdminMainPage">Admin</a></li>
                         <li><a runat ="server" visible="false" id="userProfile" href="~/UserHome">My Profile</a></li>
+                        <li><a runat ="server" visible="false" id="pokerJoinGame" href="~/GameFolder/JoinGame">Join Game</a></li>
+                        <li><a runat ="server" visible="false" id="pokerCurrentGame" href="~/GameFolder/PlayerGameInProgress">Current Game</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

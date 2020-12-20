@@ -7,7 +7,7 @@ namespace PokerWebApp.PokerLogic
 {
     public class Winner
     {
-        public Player FindWinner(Dealer dealer, Board board, List<Player> playerList)
+        public static Player FindWinner(Dealer dealer, Board board, List<Player> playerList)
         {
             Player handWinner = new Player();
 

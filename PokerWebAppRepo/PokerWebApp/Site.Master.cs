@@ -80,6 +80,7 @@ namespace PokerWebApp
             {
                 userProfile.Visible = true;
                 pokerJoinGame.Visible = true;
+                pokerCurrentGame.Visible = true;
             }
 
         }

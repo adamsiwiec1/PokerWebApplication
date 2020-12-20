@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using PokerWebApp.PokerLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace PokerWebApp.GameFolder
     {
         List<Player> allPlayers = new List<Player>();
 
+        bool showCards = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             PopulateControls();
@@ -19,26 +22,37 @@ namespace PokerWebApp.GameFolder
         }
         protected void PopulateControls()
         {
-            //populate board blank cards
-            img_b1.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_b2.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_b3.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_b4.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_b5.ImageUrl = "~/Images/FACE DOWN.jpg";
+            //Populate all cards face down
+            string faceDown = "~/Images/FACE DOWN.jpg";
 
-            //populate players blank cards
-            img_C1P1.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C2P1.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C1P2.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C2P2.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C1P3.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C2P3.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C1P4.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C2P4.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C1P5.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C2P5.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C1P6.ImageUrl = "~/Images/FACE DOWN.jpg";
-            img_C2P6.ImageUrl = "~/Images/FACE DOWN.jpg";
+            if (showCards == false)
+            {
+                List<Image> cardImages = new List<Image>();
+
+                cardImages.Add(img_b1);
+                cardImages.Add(img_b2);
+                cardImages.Add(img_b3);
+                cardImages.Add(img_b4);
+                cardImages.Add(img_b5);
+                cardImages.Add(img_C1P1);
+                cardImages.Add(img_C2P1);
+                cardImages.Add(img_C1P2);
+                cardImages.Add(img_C2P2);
+                cardImages.Add(img_C1P3);
+                cardImages.Add(img_C2P3);
+                cardImages.Add(img_C1P4);
+                cardImages.Add(img_C2P4);
+                cardImages.Add(img_C1P5);
+                cardImages.Add(img_C2P5);
+                cardImages.Add(img_C1P6);
+                cardImages.Add(img_C2P6);
+
+                foreach (Image image in cardImages)
+                {
+                    image.ImageUrl = faceDown;
+
+                }
+            }
         }
 
         protected void PopulatePlayers()
@@ -199,7 +213,42 @@ namespace PokerWebApp.GameFolder
                 cardurl = Card.prcard(allPlayers[5].InHand2);
                 img_C2P6.ImageUrl = "Images/" + cardurl + ".jpeg";
             }
-}
+
+
+
+            Player winner = Winner.FindWinner(dealer,board,allPlayers);
+
+            hd_pot.Visible = false;
+            hd_pot.InnerText = winner.WinnerMessage;
+        }
+        protected void btn_FindWinner_Click(object sender, EventArgs e)
+        {
+            hd_pot.Visible = true;
+
+
+        }
+        protected void btn_ShowAllCards_Click(object sender, EventArgs e)
+        {
+
+            img_b1.Visible = true;
+            img_b1.Visible = true;
+            img_b1.Visible = true;
+            img_b1.Visible = true;
+            img_b1.Visible = true;
+
+            img_C1P1.Visible = true;
+            img_C2P1.Visible = true;
+            img_C1P2.Visible = true;
+            img_C2P2.Visible = true;
+            img_C1P3.Visible = true;
+            img_C2P3.Visible = true;
+            img_C1P4.Visible = true;
+            img_C2P4.Visible = true;
+            img_C1P5.Visible = true;
+            img_C2P5.Visible = true;
+            img_C1P6.Visible = true;
+            img_C2P6.Visible = true;
+        }
 
         protected void btn_Check_Click(object sender, EventArgs e)
         {
@@ -220,6 +269,7 @@ namespace PokerWebApp.GameFolder
         protected void btn_StartGame_Click(object sender, EventArgs e)
         {
         }
+
         //protected void UpdateBalance()
         //{
 
