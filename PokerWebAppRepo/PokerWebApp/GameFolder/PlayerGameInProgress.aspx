@@ -41,9 +41,9 @@
 
                  <asp:Image ID="img_b3" style="clear:left" runat="server" Height="100px" Width="60px"></asp:Image>
 
-                 <asp:Image ID="img_b4" style="clear:left" runat="server" Height="100px" Width="60px" visible="false"></asp:Image>
+                 <asp:Image ID="img_b4" style="clear:left" runat="server" Height="100px" Width="60px"></asp:Image>
   
-                 <asp:Image ID="img_b5" style="clear:left" runat="server" Height="100px" Width="60px" visible="false"></asp:Image>
+                 <asp:Image ID="img_b5" style="clear:left" runat="server" Height="100px" Width="60px"></asp:Image>
             </div>
     </div>
 

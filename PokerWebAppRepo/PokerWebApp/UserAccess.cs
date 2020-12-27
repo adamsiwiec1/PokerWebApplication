@@ -26,12 +26,8 @@ namespace PokerWebApp
             SqlDataReader reader = cmd.ExecuteReader();
             table.Load(reader);
             cmd.Connection.Close();
-
-           
+       
             List<Player> allPlayers = new List<Player>();
-
-            
-
 
             for (int i = 0; i < table.Rows.Count; i++)
             {

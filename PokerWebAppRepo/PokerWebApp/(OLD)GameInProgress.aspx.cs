@@ -32,40 +32,40 @@ namespace PokerWebApp
 
             //Card1
             Player player = GameAccess.GetPlayerCardsByName(namePlayer1);
-            cardUrl = Card.prcard(player.InHand1);
+            cardUrl = Card.FmtCardImg(player.InHand1);
             img_C1P1.ImageUrl = "Images/" + cardUrl + ".jpeg";
             //Card2
-            cardUrl = Card.prcard(player.InHand2);
+            cardUrl = Card.FmtCardImg(player.InHand2);
             img_C2P1.ImageUrl = "Images/" + cardUrl + ".jpeg";
 
             player = GameAccess.GetPlayerCardsByName(namePlayer2);
-            cardUrl = Card.prcard(player.InHand1);
+            cardUrl = Card.FmtCardImg(player.InHand1);
             img_C1P2.ImageUrl = "Images/" + cardUrl + ".jpeg";
-            cardUrl = Card.prcard(player.InHand2);
+            cardUrl = Card.FmtCardImg(player.InHand2);
             img_C2P2.ImageUrl = "Images/" + cardUrl + ".jpeg";
 
             player = GameAccess.GetPlayerCardsByName(namePlayer3);
-            cardUrl = Card.prcard(player.InHand1);
+            cardUrl = Card.FmtCardImg(player.InHand1);
             img_C1P3.ImageUrl = "Images/" + cardUrl + ".jpeg";
-            cardUrl = Card.prcard(player.InHand2);
+            cardUrl = Card.FmtCardImg(player.InHand2);
             img_C2P3.ImageUrl = "Images/" + cardUrl + ".jpeg";
 
             player = GameAccess.GetPlayerCardsByName(namePlayer4);
-            cardUrl = Card.prcard(player.InHand1);
+            cardUrl = Card.FmtCardImg(player.InHand1);
             img_C1P4.ImageUrl = "Images/" + cardUrl + ".jpeg";
-            cardUrl = Card.prcard(player.InHand2);
+            cardUrl = Card.FmtCardImg(player.InHand2);
             img_C2P4.ImageUrl = "Images/" + cardUrl + ".jpeg";
 
             player = GameAccess.GetPlayerCardsByName(namePlayer5);
-            cardUrl = Card.prcard(player.InHand1);
+            cardUrl = Card.FmtCardImg(player.InHand1);
             img_C1P5.ImageUrl = "Images/" + cardUrl + ".jpeg";
-            cardUrl = Card.prcard(player.InHand2);
+            cardUrl = Card.FmtCardImg(player.InHand2);
             img_C2P5.ImageUrl = "Images/" + cardUrl + ".jpeg";
 
             player = GameAccess.GetPlayerCardsByName(namePlayer6);
-            cardUrl = Card.prcard(player.InHand1);
+            cardUrl = Card.FmtCardImg(player.InHand1);
             img_C1P6.ImageUrl = "Images/" + cardUrl + ".jpeg";
-            cardUrl = Card.prcard(player.InHand2);
+            cardUrl = Card.FmtCardImg(player.InHand2);
             img_C2P6.ImageUrl = "Images/" + cardUrl + ".jpeg";
         }
 
@@ -101,11 +101,11 @@ namespace PokerWebApp
             dealer.River(deck, board);
 
 
-            string cardimg1 = Card.prcard(board.currBoard[0]);
-            string cardimg2 = Card.prcard(board.currBoard[1]);
-            string cardimg3 = Card.prcard(board.currBoard[2]);
-            string cardimg4 = Card.prcard(board.currBoard[3]);
-            string cardimg5 = Card.prcard(board.currBoard[4]);
+            string cardimg1 = Card.FmtCardImg(board.currBoard[0]);
+            string cardimg2 = Card.FmtCardImg(board.currBoard[1]);
+            string cardimg3 = Card.FmtCardImg(board.currBoard[2]);
+            string cardimg4 = Card.FmtCardImg(board.currBoard[3]);
+            string cardimg5 = Card.FmtCardImg(board.currBoard[4]);
 
 
             GameAccess.UpdateBoard("700", board.currBoard[0].Face.ToString(), board.currBoard[0].Suit.ToString(), board.currBoard[1].Face.ToString(), board.currBoard[1].Suit.ToString(), board.currBoard[2].Face.ToString(), board.currBoard[2].Suit.ToString(), board.currBoard[3].Face.ToString(), board.currBoard[3].Suit.ToString(), board.currBoard[4].Face.ToString(), board.currBoard[4].Suit.ToString());

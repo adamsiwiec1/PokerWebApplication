@@ -27,7 +27,12 @@ namespace PokerWebApp
         public Card InHand1 { get; set; }
 
         public Card InHand2 { get; set; }
+
         public Hands BestHand { get; set; }
+
+        public string Card1Url => "Images/" + Card.FmtCardImg(InHand1) + ".jpeg";
+
+        public string Card2Url => "Images/" + Card.FmtCardImg(InHand2) + ".jpeg";
 
         public string WinnerMessage => "Player:" + Name + "wins with" + BestHand.ToString();
 

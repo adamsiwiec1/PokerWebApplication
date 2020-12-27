@@ -248,6 +248,7 @@
     <Content Include="Images\TWO DIAMONDS.jpeg" />
     <Content Include="Images\TWO HEARTS.jpeg" />
     <Content Include="Images\TWO SPADES.jpeg" />
+    <Content Include="Notes.html" />
     <Content Include="_gDevelop\GameDesign.aspx" />
     <Content Include="_multiplayer\WebSocket\client.aspx" />
     <Content Include="_multiplayer\WebSocket\Scripts\websocket.js" />
@@ -500,6 +501,7 @@
     <Compile Include="PokerLogic\Card.cs" />
     <Compile Include="PokerLogic\Dealer.cs" />
     <Compile Include="PokerLogic\Deck.cs" />
+    <Compile Include="PokerLogic\Game.cs" />
     <Compile Include="PokerLogic\Hands.cs" />
     <Compile Include="PokerLogic\Player.cs" />
     <Compile Include="PokerLogic\Winner.cs" />

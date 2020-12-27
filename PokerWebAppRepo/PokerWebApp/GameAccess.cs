@@ -11,15 +11,10 @@ namespace PokerWebApp
 {
     public class GameAccess
     {
-
-
         public static DataTable GetAllPlayers()
         {
-
-
             //connection string object that holds info about the server and the db
             //this is where we get the info about a caetegory for our user to then display it
-
             string connString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
             //pass this object to the Sqlconnection class that is embeded
@@ -29,7 +24,6 @@ namespace PokerWebApp
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "spGetAllPlayers";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
 
             DataTable table = new DataTable();
 
@@ -44,14 +38,11 @@ namespace PokerWebApp
             catch (Exception ex)
             {
 
-
-
             }
             finally
             {
                 //Im done with it now so i close the connection. We do this 'clean up' in the finally block.
                 cmd.Connection.Close();
-
             }
 
             return table;
@@ -87,8 +78,6 @@ namespace PokerWebApp
 
             return name;
         }
-
-
 
         public static Player GetPlayerCardsByName(string playerName)
         {
